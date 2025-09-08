@@ -1,4 +1,4 @@
-
+<div style="font-family:Calibri; font-size:11pt;">
 Results-driven Data Scientist with expertise in statistical engineering, machine learning, and deep learning. Experienced in working with complex datasets (oceanographic, biological, transportation) and skilled in advanced modeling (ML/DL), Big Data, and data quality assurance.
 
 ---
@@ -70,4 +70,4 @@ Results-driven Data Scientist with expertise in statistical engineering, machine
 
 ![Moubarak](Moubarak.png)
 
-[Download my CV](CV.pdf)
+[Download my CV](Moubarak_Data_scientist.pdf)
