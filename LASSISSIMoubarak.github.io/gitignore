@@ -1,0 +1,14 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Sauvegardes
+*.bak
+*.tmp
+
+# Logs
+*.log
+
+# Python (si un jour tu mets du code)
+__pycache__/
+*.pyc
