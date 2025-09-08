@@ -68,6 +68,5 @@ Results-driven Data Scientist with expertise in statistical engineering, machine
 **LinkedIn:** [linkedin.com/in/moubarak-lassissi-610b87202](https://www.linkedin.com/in/moubarak-lassissi-610b87202)  
 **GitHub:** [github.com/LASSISSIMoubarak](https://github.com/LASSISSIMoubarak)
 
-![Moubarak](LASSISSIMoubarak.github.io\Moubarak.png)
+![Moubarak](https://LASSISSIMoubarak.github.io/Moubarak.png)
 
-[Download my CV](LASSISSIMoubarak.github.io\Moubarak_Data_scientist.pdf)
