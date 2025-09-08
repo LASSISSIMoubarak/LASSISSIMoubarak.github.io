@@ -1,4 +1,4 @@
-<div style="font-family:Calibri; font-size:11pt;">
+<div style="font-family:Times New Roman; font-size:12pt;">
 Results-driven Data Scientist with expertise in statistical engineering, machine learning, and deep learning. Experienced in working with complex datasets (oceanographic, biological, transportation) and skilled in advanced modeling (ML/DL), Big Data, and data quality assurance.
 
 ---
@@ -68,6 +68,6 @@ Results-driven Data Scientist with expertise in statistical engineering, machine
 **LinkedIn:** [linkedin.com/in/moubarak-lassissi-610b87202](https://www.linkedin.com/in/moubarak-lassissi-610b87202)  
 **GitHub:** [github.com/LASSISSIMoubarak](https://github.com/LASSISSIMoubarak)
 
-![Moubarak](Moubarak.png)
+![Moubarak](C:\Users\lassi\Porfolio\LASSISSIMoubarak.github.io\Moubarak.png)
 
-[Download my CV](Moubarak_Data_scientist.pdf)
+[Download my CV](C:\Users\lassi\Porfolio\LASSISSIMoubarak.github.io\Moubarak_Data_scientist.pdf)
