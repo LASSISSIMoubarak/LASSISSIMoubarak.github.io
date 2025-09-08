@@ -517,7 +517,7 @@
                     <i class="fab fa-github contact-icon"></i>
                     <div>
                         <h3>GitHub</h3>
-                        <p>github.com/LASSISSIMoubarak</p>
+                        <p>https://github.com/LASSISSIMoubarak/LASSISSIMoubarak</p>
                     </div>
                 </div>
             </div>
