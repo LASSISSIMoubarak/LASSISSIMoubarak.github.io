@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moubarak Lassissi - Data Scientist</title>
+    <title>Moubarak LASSISSI - Data Scientist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -298,7 +298,7 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <img src="Moubarak.png" alt="Moubarak Lassissi" class="profile-img">
+                <img src="Moubarak.png" alt="Moubarak LASSISSI" class="profile-img">
                 <div class="profile-text">
                     <h1>Moubarak Lassissi</h1>
                     <p class="tagline">Data Scientist specialized in statistical engineering, machine learning and deep learning</p>
@@ -525,7 +525,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Moubarak Lassissi - Data Scientist</p>
+            <p>&copy; 2025 Moubarak LASSISSI - Data Scientist</p>
         </div>
     </footer>
 </body>
