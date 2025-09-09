@@ -300,7 +300,7 @@
             <div class="header-content">
                 <img src="Moubarak.png" alt="Moubarak LASSISSI" class="profile-img">
                 <div class="profile-text">
-                    <h1>Moubarak Lassissi</h1>
+                    <h1>Moubarak LASSISSI</h1>
                     <p class="tagline">Data Scientist specialized in statistical engineering, machine learning and deep learning</p>
                     <p>Expert in processing complex datasets (oceanographic, biological, transportation) and skilled in advanced modeling (ML/DL), Big Data, and data quality assurance.</p>
                     <div class="social-links">
