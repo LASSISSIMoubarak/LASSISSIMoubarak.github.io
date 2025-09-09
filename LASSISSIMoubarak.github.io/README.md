@@ -306,7 +306,7 @@
                     <p>Expert in processing complex datasets (oceanographic, biological, transportation) and skilled in advanced modeling (ML/DL), Big Data, and data quality assurance.</p>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/moubarak-lassissi-610b87202" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/LASSISSIMoubarak" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak" target="_blank"><i class="fab fa-github"></i></a>
                         <a href="mailto:lassissimoubarak20@gmail.com"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
