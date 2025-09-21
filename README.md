@@ -218,6 +218,15 @@
             margin-bottom: 1rem;
         }
         
+        .project-meta a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .project-meta a:hover {
+            text-decoration: underline;
+        }
+
         .languages-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -263,6 +272,16 @@
         .contact-icon {
             font-size: 2rem;
             margin-right: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .contact-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
             color: var(--secondary-color);
         }
         
@@ -313,18 +332,6 @@
         </div>
     </header>
 
-    <section id="internship">
-        <div class="container">
-            <h2>M2 Internship</h2>
-            <div class="card">
-                <h3>Neural Mapping of Human Operator Decision</h3>
-                <p class="date">Pokapok & IMT Atlantique, 2025</p>
-                <p><strong>Description:</strong> Quality control and preprocessing of oceanographic data, optimization of neural network performance indicators.</p>
-                <p><strong>Tools:</strong> PyTorch, deep learning, data quality assurance.</p>
-            </div>
-        </div>
-    </section>
-
     <section id="projects">
         <div class="container">
             <h2>Projects</h2>
@@ -332,160 +339,58 @@
                 <div class="project-card">
                     <div class="project-content">
                         <h3>Traffic Prediction using Functional Data</h3>
-                        <p class="project-meta"><i class="fas fa-file-code"></i> datachallenge.py</p>
+                        <p class="project-meta"><i class="fas fa-file-code"></i> 
+                           <a href="https://github.com/LASSISSIMoubarak/TrafficPrediction" target="_blank">datachallenge.py</a>
+                        </p>
                         <p>Prediction of transport card validations (passenger flow) using functional data analysis.</p>
-                        <p><strong>Techniques:</strong> B-splines, Fourier basis, regression models, ML models (Random Forest, XGBoost, SARIMA).</p>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-content">
                         <h3>Kernel Approximation for Faster Machine Learning</h3>
-                        <p class="project-meta"><i class="fas fa-file-code"></i> kernel_approximation.ipynb</p>
+                        <p class="project-meta"><i class="fas fa-file-code"></i> 
+                           <a href="https://github.com/LASSISSIMoubarak/KernelApproximation" target="_blank">kernel_approximation.ipynb</a>
+                        </p>
                         <p>Implementation of Random Fourier Features to speed up kernel-based methods.</p>
-                        <p><strong>Techniques:</strong> Kernel approximation, dimensionality reduction, scalable ML.</p>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-content">
                         <h3>CNN for Image Classification</h3>
-                        <p class="project-meta"><i class="fas fa-file-code"></i> TP_CNN.ipynb</p>
+                        <p class="project-meta"><i class="fas fa-file-code"></i> 
+                           <a href="https://github.com/LASSISSIMoubarak/CNN-Image-Classification" target="_blank">TP_CNN.ipynb</a>
+                        </p>
                         <p>Simple CNN architecture for multiclass image classification.</p>
-                        <p><strong>Techniques:</strong> Deep learning, convolution layers, evaluation metrics.</p>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-content">
                         <h3>Functional Data Clustering</h3>
-                        <p class="project-meta">University of Nantes</p>
+                        <p class="project-meta"><i class="fas fa-university"></i> University of Nantes</p>
                         <p>Implementation and evaluation of clustering methods applied to functional data.</p>
-                        <p><strong>Techniques:</strong> Functional Data Analysis (FDA), clustering, distance-based methods.</p>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-content">
                         <h3>Multivariate ANOVA and Multi-block Analysis</h3>
-                        <p class="project-meta"><i class="fas fa-file-code"></i> ANOVA_MULT_SENSO_ET_VOLA.R</p>
+                        <p class="project-meta"><i class="fas fa-file-code"></i> 
+                           <a href="https://github.com/LASSISSIMoubarak/ANOVA-Project" target="_blank">ANOVA_MULT_SENSO_ET_VOLA.R</a>
+                        </p>
                         <p>Application of advanced statistical methods to multivariate biological data.</p>
-                        <p><strong>Techniques:</strong> ASCA, multivariate ANOVA.</p>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-content">
                         <h3>Support Vector Machines (SVM)</h3>
-                        <p class="project-meta"><i class="fas fa-file-code"></i> Kernel_approximation.ipynb</p>
+                        <p class="project-meta"><i class="fas fa-file-code"></i> 
+                           <a href="https://github.com/LASSISSIMoubarak/SVM-Project" target="_blank">Kernel_approximation.ipynb</a>
+                        </p>
                         <p>Theoretical study and implementation of SVM models, performance analysis and hyperparameter tuning.</p>
-                        <p><strong>Techniques:</strong> SVM, kernels, cross-validation.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Programming</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Python (advanced)</span>
-                        <span class="skill-item">R (advanced)</span>
-                        <span class="skill-item">SQL</span>
-                        <span class="skill-item">SAS</span>
-                        <span class="skill-item">SPSS</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Machine Learning & Deep Learning</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Regression</span>
-                        <span class="skill-item">Random Forest</span>
-                        <span class="skill-item">Gradient Boosting</span>
-                        <span class="skill-item">SVM</span>
-                        <span class="skill-item">K-means</span>
-                        <span class="skill-item">DBSCAN</span>
-                        <span class="skill-item">PCA</span>
-                        <span class="skill-item">MLP</span>
-                        <span class="skill-item">CNN</span>
-                        <span class="skill-item">RNN</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Big Data & MLOps</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Spark</span>
-                        <span class="skill-item">Docker</span>
-                        <span class="skill-item">MLflow</span>
-                        <span class="skill-item">Airflow</span>
-                        <span class="skill-item">FastAPI</span>
-                        <span class="skill-item">Flask</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Databases</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">MySQL</span>
-                        <span class="skill-item">Oracle</span>
-                        <span class="skill-item">MongoDB</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Visualization</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Matplotlib</span>
-                        <span class="skill-item">Seaborn</span>
-                        <span class="skill-item">Plotly</span>
-                        <span class="skill-item">ggplot2</span>
-                        <span class="skill-item">Power BI</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Collaboration Tools</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">Google Colab</span>
-                        <span class="skill-item">VS Code</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="languages">
-        <div class="container">
-            <h2>Languages</h2>
-            <div class="languages-grid">
-                <div class="language-item">
-                    <i class="fas fa-language language-icon"></i>
-                    <div>
-                        <h3>French</h3>
-                        <p>Advanced level</p>
-                    </div>
-                </div>
-
-                <div class="language-item">
-                    <i class="fas fa-language language-icon"></i>
-                    <div>
-                        <h3>English</h3>
-                        <p>Intermediate level</p>
-                    </div>
-                </div>
-
-                <div class="language-item">
-                    <i class="fas fa-language language-icon"></i>
-                    <div>
-                        <h3>Ewe, Kabyè, Yoruba</h3>
-                        <p>Advanced level</p>
                     </div>
                 </div>
             </div>
@@ -500,7 +405,7 @@
                     <i class="fas fa-envelope contact-icon"></i>
                     <div>
                         <h3>Email</h3>
-                        <p>lassissimoubarak20@gmail.com</p>
+                        <p><a href="mailto:lassissimoubarak20@gmail.com">lassissimoubarak20@gmail.com</a></p>
                     </div>
                 </div>
 
@@ -508,7 +413,7 @@
                     <i class="fab fa-linkedin contact-icon"></i>
                     <div>
                         <h3>LinkedIn</h3>
-                        <p>linkedin.com/in/moubarak-lassissi-610b87202</p>
+                        <p><a href="https://www.linkedin.com/in/moubarak-lassissi-610b87202" target="_blank">linkedin.com/in/moubarak-lassissi-610b87202</a></p>
                     </div>
                 </div>
 
@@ -516,7 +421,7 @@
                     <i class="fab fa-github contact-icon"></i>
                     <div>
                         <h3>GitHub</h3>
-                        <p>https://github.com/LASSISSIMoubarak/LASSISSIMoubarak</p>
+                        <p><a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak" target="_blank">github.com/LASSISSIMoubarak</a></p>
                     </div>
                 </div>
             </div>
