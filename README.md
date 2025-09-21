@@ -340,7 +340,7 @@
                     <div class="project-content">
                         <h3>Traffic Prediction using Functional Data</h3>
                         <p class="project-meta"><i class="fas fa-file-code"></i> 
-                           <a href="https://github.com/LASSISSIMoubarak/TrafficPrediction" target="_blank">datachallenge.py</a>
+                           <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/blob/main/datachalenge.py" target="_blank">datachallenge.py</a>
                         </p>
                         <p>Prediction of transport card validations (passenger flow) using functional data analysis.</p>
                     </div>
@@ -350,7 +350,7 @@
                     <div class="project-content">
                         <h3>Kernel Approximation for Faster Machine Learning</h3>
                         <p class="project-meta"><i class="fas fa-file-code"></i> 
-                           <a href="https://github.com/LASSISSIMoubarak/KernelApproximation" target="_blank">kernel_approximation.ipynb</a>
+                           <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/blob/main/Kernel_approximation.ipynb" target="_blank">kernel_approximation.ipynb</a>
                         </p>
                         <p>Implementation of Random Fourier Features to speed up kernel-based methods.</p>
                     </div>
@@ -360,7 +360,7 @@
                     <div class="project-content">
                         <h3>CNN for Image Classification</h3>
                         <p class="project-meta"><i class="fas fa-file-code"></i> 
-                           <a href="https://github.com/LASSISSIMoubarak/CNN-Image-Classification" target="_blank">TP_CNN.ipynb</a>
+                           <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/blob/main/TP_CNN.ipynb" target="_blank">TP_CNN.ipynb</a>
                         </p>
                         <p>Simple CNN architecture for multiclass image classification.</p>
                     </div>
@@ -378,7 +378,7 @@
                     <div class="project-content">
                         <h3>Multivariate ANOVA and Multi-block Analysis</h3>
                         <p class="project-meta"><i class="fas fa-file-code"></i> 
-                           <a href="https://github.com/LASSISSIMoubarak/ANOVA-Project" target="_blank">ANOVA_MULT_SENSO_ET_VOLA.R</a>
+                           <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/blob/main/ANOVA%20MULT%20SENSO%20ET%20VOLA.R" target="_blank">ANOVA_MULT_SENSO_ET_VOLA.R</a>
                         </p>
                         <p>Application of advanced statistical methods to multivariate biological data.</p>
                     </div>
@@ -388,7 +388,7 @@
                     <div class="project-content">
                         <h3>Support Vector Machines (SVM)</h3>
                         <p class="project-meta"><i class="fas fa-file-code"></i> 
-                           <a href="https://github.com/LASSISSIMoubarak/SVM-Project" target="_blank">Kernel_approximation.ipynb</a>
+                           <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/blob/main/Kernel_approximation.ipynb" target="_blank">Kernel_approximation.ipynb</a>
                         </p>
                         <p>Theoretical study and implementation of SVM models, performance analysis and hyperparameter tuning.</p>
                     </div>
