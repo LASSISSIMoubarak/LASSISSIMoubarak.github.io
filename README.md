@@ -386,11 +386,16 @@
 
                 <div class="project-card">
                     <div class="project-content">
-                        <h3>Support Vector Machines (SVM)</h3>
-                        <p class="project-meta"><i class="fas fa-file-code"></i> 
-                           <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/blob/main/Kernel_approximation.ipynb" target="_blank">Kernel_approximation.ipynb</a>
+                      <h3>Bayesian Model (Mediation)</h3>
+                      <p class="project-meta">
+                        <i class="fas fa-file-code"></i> 
+                        <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/blob/main/Projet%20_stat_bayes_stan.R" target="_blank">
+                            Stan_Bayesian_model.R
+                        </a>
                         </p>
-                        <p>Theoretical study and implementation of SVM models, performance analysis and hyperparameter tuning.</p>
+                        <p>
+                        Bayesian mediation analysis to assess how the perceived risk of contracting Covid influences the population’s beliefs. 
+                        </p>
                     </div>
                 </div>
             </div>
