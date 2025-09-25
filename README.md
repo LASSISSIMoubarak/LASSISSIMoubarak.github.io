@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -66,7 +65,7 @@
                 <div class="profile-text">
                     <h1>Moubarak LASSISSI</h1>
                     <p class="tagline">Data Scientist & Statistical Engineer specializing in statistical engineering, machine learning, and deep learning</p>
-                    <p>Expert in processing complex datasets (oceanographic, biological, transportation) and skilled in advanced modeling (ML/DL), Big Data, and data quality assurance.</p>
+                    <p>Specialist in processing complex datasets (oceanographic, biological, transportation) and skilled in advanced modeling (ML/DL), Big Data, and data quality assurance.</p>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/moubarak-lassissi-610b87202" target="_blank"><i class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak" target="_blank"><i class="fab fa-github"></i></a>
@@ -187,6 +186,7 @@
                     <h3>Big Data & MLOps</h3>
                     <div class="skill-list">
                         <span class="skill-item">Spark</span>
+                        <span class="skill-item">Hadoop</span>
                         <span class="skill-item">Docker</span>
                         <span class="skill-item">MLflow</span>
                         <span class="skill-item">Airflow</span>
