@@ -84,7 +84,7 @@
                     <div class="project-content">
                         <h3>Final-year Master Internship at IMT Atlantique & Pokapok</h3>
                         <p class="project-meta"><i class="fas fa-university"></i> IMT Atlantique & Pokapok</p>
-                        <p>Master internship focused on quality control of oceanographic temperature and salinity data using machine learning and advanced data processing techniques.</p>
+                        <p>Master internship involving quality control of oceanographic temperature and salinity datasets through machine learning and advanced data processing methods, including the design and deployment of ETL workflows and data pipelines.</p>
                     </div>
                 </div>
             </div>
@@ -162,6 +162,8 @@
                         <span class="skill-item">SQL</span>
                         <span class="skill-item">SAS</span>
                         <span class="skill-item">SPSS</span>
+                        <span class="skill-item">VBA</span>
+                        <span class="skill-item">EXCEL</span>
                     </div>
                 </div>
 
