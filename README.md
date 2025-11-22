@@ -75,21 +75,41 @@
         </div>
     </header>
 
-    <!-- Internship Section -->
-    <section id="internship">
-        <div class="container">
-            <h2>Internship</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Final-year Master Internship at IMT Atlantique & Pokapok</h3>
-                        <p class="project-meta"><i class="fas fa-university"></i> IMT Atlantique & Pokapok</p>
-                        <p>Master internship involving quality control of oceanographic temperature and salinity datasets through machine learning and advanced data processing methods, including the design and deployment of ETL workflows and data pipelines.</p>
-                    </div>
+   <!-- Professional Experience Section -->
+<section id="experience">
+    <div class="container">
+        <h2>Professional Experience</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Data Scientist – POKaPOK & IMT Atlantique, Brest (Plouzané)</h3>
+                    <p class="project-meta"><i class="fas fa-briefcase"></i> POKaPOK & IMT Atlantique</p>
+                    <ul>
+                        <li>Preprocessing and quality control of oceanographic data.</li>
+                        <li>Optimization of deep learning models (MLP, RNN): 98% precision, 92% accuracy.</li>
+                        <li>Error analysis and performance improvement of prediction models.</li>
+                        <li>Implementation of data pipelines (ETL, MLflow).</li>
+                        <li>Interactive visualization of poorly modeled data for root-cause analysis.</li>
+                        <li>Implementation of MLOps strategies with containerization and Git deployment.</li>
+                        <li>Design of parallelized solutions (multithreading / multiprocessing) for efficient task distribution and improved server load management.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Data Challenge – SNCF Traffic Prediction</h3>
+                    <p class="project-meta"><i class="fas fa-chart-line"></i> SNCF Kaggle Challenge</p>
+                    <ul>
+                        <li>Exploratory analysis and processing of passenger traffic data.</li>
+                        <li>Prediction of passenger volume using time series models (SARIMA) and machine learning models (Random Forest, XGBoost, Bagging Regressor, neural networks).</li>
+                        <li>Evaluation and optimization of loss functions to improve model performance.</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Projects Section -->
     <section id="projects">
