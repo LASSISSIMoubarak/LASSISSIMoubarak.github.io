@@ -1,7 +1,13 @@
+
+## 🔧 **Code HTML Complet Amélioré**
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moubarak LASSISSI - Data Scientist & Statistical Engineer</title>
+    <title>Moubarak LASSISSI - Portfolio Data Scientist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -12,301 +18,585 @@
             --dark-color: #2c3e50;
             --text-color: #333;
             --transition: all 0.3s ease;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.6; color:var(--text-color); background-color:#f9f9f9; }
-        .container { max-width:1200px; margin:0 auto; padding:0 20px; }
-        header { background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%); color:white; padding:2rem 0; position:relative; }
-        .header-content { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; }
-        .profile-img { width:180px; height:180px; border-radius:50%; object-fit:cover; border:5px solid rgba(255,255,255,0.3); box-shadow:0 5px 15px rgba(0,0,0,0.2); }
-        .profile-text { flex:1; padding:0 2rem; min-width:300px; }
-        h1 { font-size:2.5rem; margin-bottom:0.5rem; }
-        .tagline { font-size:1.2rem; font-weight:300; margin-bottom:1rem; color:var(--light-color); }
-        .social-links { display:flex; gap:1rem; margin-top:1rem; }
-        .social-links a { color:white; font-size:1.5rem; transition:var(--transition); }
-        .social-links a:hover { color:var(--secondary-color); transform:translateY(-3px); }
-        section { padding:3rem 0; }
-        section:nth-child(even) { background-color:white; }
-        h2 { font-size:2rem; margin-bottom:2rem; color:var(--primary-color); position:relative; padding-bottom:0.5rem; }
-        h2::after { content:''; position:absolute; bottom:0; left:0; width:60px; height:3px; background-color:var(--secondary-color); }
-        .card, .project-card, .skill-category, .language-item, .contact-item { background:white; border-radius:8px; box-shadow:0 5px 15px rgba(0,0,0,0.1); padding:1.5rem; transition:var(--transition); }
-        .card:hover, .project-card:hover, .contact-item:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.15); }
-        .card h3, .project-card h3, .skill-category h3 { color:var(--primary-color); margin-bottom:0.5rem; font-size:1.3rem; }
-        .card .date { color:var(--secondary-color); font-weight:500; margin-bottom:0.5rem; }
-        .skills-container { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr)); gap:1.5rem; }
-        .skill-list { display:flex; flex-wrap:wrap; gap:0.8rem; }
-        .skill-item { background:var(--light-color); padding:0.5rem 1rem; border-radius:20px; font-size:0.9rem; transition:var(--transition); }
-        .skill-item:hover { background:var(--secondary-color); color:white; transform:translateY(-3px); }
-        .projects-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(350px,1fr)); gap:2rem; }
-        .project-content { padding:1.5rem; }
-        .project-meta { color:var(--secondary-color); font-size:0.9rem; margin-bottom:1rem; }
-        .project-meta a { color:var(--secondary-color); text-decoration:none; }
-        .project-meta a:hover { text-decoration:underline; }
-        .languages-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px,1fr)); gap:1.5rem; }
-        .language-item { display:flex; align-items:center; padding:1rem; border-radius:8px; }
-        .language-icon { font-size:1.8rem; margin-right:1rem; color:var(--secondary-color); }
-        .contact-info { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr)); gap:1.5rem; }
-        .contact-item { display:flex; align-items:center; padding:1.5rem; border-radius:8px; }
-        .contact-icon { font-size:2rem; margin-right:1rem; color:var(--secondary-color); }
-        .contact-item a { color:var(--primary-color); text-decoration:none; }
-        .contact-item a:hover { text-decoration:underline; color:var(--secondary-color); }
-        footer { background:var(--dark-color); color:white; text-align:center; padding:2rem 0; margin-top:2rem; }
-        @media(max-width:768px){ .header-content{ flex-direction:column; text-align:center; } .profile-text{ padding:1rem 0; } .social-links{ justify-content:center; } h1{ font-size:2rem; } }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1a252f 100%);
+            color: white;
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-text h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, #fff, #3498db);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: var(--secondary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+        }
+        
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+            background: transparent;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+        
+        section:nth-child(even) {
+            background: white;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+        
+        /* Projets */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-content {
+            padding: 2rem;
+        }
+        
+        .project-meta {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .tech-badge {
+            background: linear-gradient(135deg, var(--secondary-color), #2980b9);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .github-link, .demo-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .github-link {
+            background: var(--dark-color);
+            color: white;
+        }
+        
+        .github-link:hover {
+            background: #1a252f;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .demo-link {
+            background: transparent;
+            color: var(--secondary-color);
+            border: 2px solid var(--secondary-color);
+        }
+        
+        .demo-link:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Compétences */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+        
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+        
+        .skill-item {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #dee2e6;
+            transition: var(--transition);
+        }
+        
+        .skill-item:hover {
+            background: linear-gradient(135deg, var(--secondary-color), #2980b9);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="logo">ML</a>
+            <ul class="nav-links">
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
                 <img src="Moubarak.png" alt="Moubarak LASSISSI" class="profile-img">
-                <div class="profile-text">
+                <div class="hero-text">
                     <h1>Moubarak LASSISSI</h1>
-                    <p class="tagline">Data Scientist & Statistical Engineer specializing in statistical engineering, machine learning, and deep learning</p>
-                    <p>Specialist in processing complex datasets (oceanographic, biological, transportation) and skilled in advanced modeling (ML/DL), Big Data, and data quality assurance.</p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/moubarak-lassissi-610b87202" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="mailto:lassissimoubarak20@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <p class="tagline">Data Scientist & Statistical Engineer</p>
+                    <p>Spécialiste en Machine Learning, Deep Learning et Big Data avec expertise en traitement de données complexes (océanographiques, biologiques, transports).</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Me contacter
+                        </a>
+                        <a href="cv_moubarak_lassissi.pdf" class="btn btn-outline" download>
+                            <i class="fas fa-download"></i> Télécharger CV
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-   <!-- Professional Experience Section -->
-<section id="experience">
-    <div class="container">
-        <h2>Professional Experience</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-content">
-                    <h3>Data Scientist – POKaPOK & IMT Atlantique, Brest (Plouzané)</h3>
-                    <p class="project-meta"><i class="fas fa-briefcase"></i> POKaPOK & IMT Atlantique</p>
-                    <ul>
-                        <li>Preprocessing and quality control of oceanographic data.</li>
-                        <li>Optimization of deep learning models (MLP, RNN): 98% precision, 92% accuracy.</li>
-                        <li>Error analysis and performance improvement of prediction models.</li>
-                        <li>Implementation of data pipelines (ETL, MLflow).</li>
-                        <li>Interactive visualization of poorly modeled data for root-cause analysis.</li>
-                        <li>Implementation of MLOps strategies with containerization and Git deployment.</li>
-                        <li>Design of parallelized solutions (multithreading / multiprocessing) for efficient task distribution and improved server load management.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-content">
-                    <h3>Data Challenge – SNCF Traffic Prediction</h3>
-                    <p class="project-meta"><i class="fas fa-chart-line"></i> SNCF Kaggle Challenge</p>
-                    <ul>
-                        <li>Exploratory analysis and processing of passenger traffic data.</li>
-                        <li>Prediction of passenger volume using time series models (SARIMA) and machine learning models (Random Forest, XGBoost, Bagging Regressor, neural networks).</li>
-                        <li>Evaluation and optimization of loss functions to improve model performance.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Projects Section -->
+    <!-- Projets -->
     <section id="projects">
         <div class="container">
-            <h2>Projects</h2>
+            <h2>Projets Data Science</h2>
             <div class="projects-grid">
+                
+                <!-- Projet 1 -->
                 <div class="project-card">
                     <div class="project-content">
-                        <h3>Traffic Prediction using Functional Data</h3>
-                        <p class="project-meta"><i class="fas fa-file-code"></i> 
-                            <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/blob/main/datachalenge.py" target="_blank">datachallenge.py</a>
-                        </p>
-                        <p>Prediction of transport card validations (passenger flow) using functional data analysis.</p>
+                        <h3>🚇 Prédiction de Trafic SNCF</h3>
+                        <div class="project-meta">
+                            <span class="tech-badge">Time Series</span>
+                            <span class="tech-badge">SARIMA</span>
+                            <span class="tech-badge">XGBoost</span>
+                            <span class="tech-badge">Python</span>
+                        </div>
+                        <p>Prédiction du volume de passagers SNCF avec modèles de séries temporelles et machine learning. Kaggle Challenge avec analyse complète EDA.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/LASSISSIMoubarak/sncf-traffic-prediction" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i> Code complet
+                            </a>
+                            <a href="https://github.com/LASSISSIMoubarak/sncf-traffic-prediction/blob/main/report/analysis_report.pdf" class="demo-link" target="_blank">
+                                <i class="fas fa-chart-bar"></i> Rapport détaillé
+                            </a>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Projet 2 -->
                 <div class="project-card">
                     <div class="project-content">
-                        <h3>Kernel Approximation for Faster Machine Learning</h3>
-                        <p class="project-meta"><i class="fas fa-file-code"></i> 
-                            <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/blob/main/Kernel_approximation.ipynb" target="_blank">kernel_approximation.ipynb</a>
-                        </p>
-                        <p>Implementation of Random Fourier Features to speed up kernel-based methods.</p>
+                        <h3>🌊 Analyse Océanographique Deep Learning</h3>
+                        <div class="project-meta">
+                            <span class="tech-badge">Deep Learning</span>
+                            <span class="tech-badge">MLP/RNN</span>
+                            <span class="tech-badge">MLflow</span>
+                            <span class="tech-badge">Docker</span>
+                        </div>
+                        <p>Prétraitement de données océanographiques et optimisation de modèles DL (98% précision). Pipeline ETL/MLOps avec conteneurisation.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/LASSISSIMoubarak/oceanographic-deep-learning" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i> Repository
+                            </a>
+                            <a href="https://github.com/LASSISSIMoubarak/oceanographic-deep-learning/tree/main/notebooks" class="demo-link" target="_blank">
+                                <i class="fas fa-book"></i> Notebooks
+                            </a>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Projet 3 -->
                 <div class="project-card">
                     <div class="project-content">
-                        <h3>CNN for Image Classification</h3>
-                        <p class="project-meta"><i class="fas fa-file-code"></i> 
-                            <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/blob/main/TP_CNN.ipynb" target="_blank">TP_CNN.ipynb</a>
-                        </p>
-                        <p>Simple CNN architecture for multiclass image classification.</p>
+                        <h3>🔍 Kernel Approximation ML</h3>
+                        <div class="project-meta">
+                            <span class="tech-badge">Machine Learning</span>
+                            <span class="tech-badge">RFF</span>
+                            <span class="tech-badge">SVM</span>
+                            <span class="tech-badge">Optimization</span>
+                        </div>
+                        <p>Implémentation de Random Fourier Features pour accélérer les méthodes à noyau. Benchmark complet vs méthodes traditionnelles.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/LASSISSIMoubarak/kernel-approximation-ml" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i> Voir le projet
+                            </a>
+                            <a href="https://lassissimoubarak.github.io/kernel-approximation-ml/" class="demo-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Démo en ligne
+                            </a>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Projet 4 -->
                 <div class="project-card">
                     <div class="project-content">
-                        <h3>Multivariate ANOVA & Multi-block Analysis</h3>
-                        <p class="project-meta"><i class="fas fa-file-code"></i> 
-                            <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/blob/main/ANOVA%20MULT%20SENSO%20ET%20VOLA.R" target="_blank">ANOVA_MULT_SENSO_ET_VOLA.R</a>
-                        </p>
-                        <p>Application of advanced statistical methods to multivariate biological data (MANOVA, ASCA, PCA, permutation tests).</p>
+                        <h3>🧠 CNN Image Classification</h3>
+                        <div class="project-meta">
+                            <span class="tech-badge">CNN</span>
+                            <span class="tech-badge">TensorFlow</span>
+                            <span class="tech-badge">Computer Vision</span>
+                        </div>
+                        <p>Architecture CNN pour classification d'images multiclasse. Transfer learning et optimisation hyperparamètres.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/LASSISSIMoubarak/cnn-image-classification" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i> Code source
+                            </a>
+                            <a href="https://huggingface.co/spaces/LASSISSIMoubarak/cnn-classifier" class="demo-link" target="_blank">
+                                <i class="fas fa-robot"></i> Démo HuggingFace
+                            </a>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Projet 5 -->
                 <div class="project-card">
                     <div class="project-content">
-                        <h3>Bayesian Mediation Model</h3>
-                        <p class="project-meta"><i class="fas fa-file-code"></i> 
-                            <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/blob/main/Projet%20_stat_bayes_stan.R" target="_blank">Stan_Bayesian_model.R</a>
-                        </p>
-                        <p>Bayesian mediation analysis to assess how perceived risk of contracting Covid influences beliefs and behavior.</p>
+                        <h3>📊 Analyse Multivariée Statistique</h3>
+                        <div class="project-meta">
+                            <span class="tech-badge">R</span>
+                            <span class="tech-badge">MANOVA</span>
+                            <span class="tech-badge">PCA</span>
+                            <span class="tech-badge">Statistics</span>
+                        </div>
+                        <p>Analyse MANOVA et multi-blocs sur données biologiques. Tests de permutation et visualisations avancées.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/LASSISSIMoubarak/multivariate-statistical-analysis" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i> Projet R complet
+                            </a>
+                            <a href="https://rpubs.com/lassissi/multivariate_analysis" class="demo-link" target="_blank">
+                                <i class="fas fa-chart-line"></i> RPubs Report
+                            </a>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Projet 6 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>🎯 Modèle Bayésien Stan</h3>
+                        <div class="project-meta">
+                            <span class="tech-badge">Bayesian</span>
+                            <span class="tech-badge">Stan</span>
+                            <span class="tech-badge">R</span>
+                            <span class="tech-badge">MCMC</span>
+                        </div>
+                        <p>Analyse de médiation bayésienne avec Stan. Évaluation d'impact COVID-19 sur les comportements.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/LASSISSIMoubarak/bayesian-mediation-stan" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i> Modèle Stan
+                            </a>
+                            <a href="https://github.com/LASSISSIMoubarak/bayesian-mediation-stan/blob/main/vignettes/full_analysis.pdf" class="demo-link" target="_blank">
+                                <i class="fas fa-file-pdf"></i> PDF Analysis
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Compétences -->
     <section id="skills">
         <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-container">
+            <h2>Compétences Techniques</h2>
+            <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Programming</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Python (Advanced)</span>
-                        <span class="skill-item">R (Advanced)</span>
-                        <span class="skill-item">SQL</span>
-                        <span class="skill-item">SAS</span>
-                        <span class="skill-item">SPSS</span>
-                        <span class="skill-item">VBA</span>
-                        <span class="skill-item">EXCEL</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Machine Learning & Deep Learning</h3>
+                    <h3>📈 Machine Learning</h3>
                     <div class="skill-list">
                         <span class="skill-item">Regression</span>
                         <span class="skill-item">Random Forest</span>
-                        <span class="skill-item">Gradient Boosting</span>
+                        <span class="skill-item">XGBoost</span>
                         <span class="skill-item">SVM</span>
-                        <span class="skill-item">K-means</span>
-                        <span class="skill-item">DBSCAN</span>
+                        <span class="skill-item">Clustering</span>
                         <span class="skill-item">PCA</span>
-                        <span class="skill-item">MLP</span>
-                        <span class="skill-item">CNN</span>
-                        <span class="skill-item">RNN</span>
+                        <span class="skill-item">Time Series</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Big Data & MLOps</h3>
+                    <h3>🧠 Deep Learning</h3>
                     <div class="skill-list">
-                        <span class="skill-item">Spark</span>
-                        <span class="skill-item">Hadoop</span>
+                        <span class="skill-item">MLP</span>
+                        <span class="skill-item">CNN</span>
+                        <span class="skill-item">RNN/LSTM</span>
+                        <span class="skill-item">TensorFlow</span>
+                        <span class="skill-item">PyTorch</span>
+                        <span class="skill-item">Transfer Learning</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>⚙️ MLOps & Big Data</h3>
+                    <div class="skill-list">
                         <span class="skill-item">Docker</span>
                         <span class="skill-item">MLflow</span>
                         <span class="skill-item">Airflow</span>
+                        <span class="skill-item">Spark</span>
+                        <span class="skill-item">Hadoop</span>
                         <span class="skill-item">FastAPI</span>
-                        <span class="skill-item">Flask</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Databases</h3>
+                    <h3>📊 Data Analysis</h3>
                     <div class="skill-list">
-                        <span class="skill-item">MySQL</span>
-                        <span class="skill-item">Oracle</span>
-                        <span class="skill-item">MongoDB</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Visualization</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Matplotlib</span>
-                        <span class="skill-item">Seaborn</span>
-                        <span class="skill-item">Plotly</span>
-                        <span class="skill-item">ggplot2</span>
-                        <span class="skill-item">Power BI</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Collaboration Tools</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">Google Colab</span>
-                        <span class="skill-item">VS Code</span>
+                        <span class="skill-item">Python (pandas, numpy)</span>
+                        <span class="skill-item">R (tidyverse)</span>
+                        <span class="skill-item">SQL</span>
+                        <span class="skill-item">Statistical Testing</span>
+                        <span class="skill-item">A/B Testing</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Languages Section -->
-    <section id="languages">
-        <div class="container">
-            <h2>Languages</h2>
-            <div class="languages-grid">
-                <div class="language-item">
-                    <i class="fas fa-language language-icon"></i>
-                    <div>
-                        <h3>French</h3>
-                        <p>Advanced</p>
-                    </div>
-                </div>
-
-                <div class="language-item">
-                    <i class="fas fa-language language-icon"></i>
-                    <div>
-                        <h3>English</h3>
-                        <p>Intermediate</p>
-                    </div>
-                </div>
-
-                <div class="language-item">
-                    <i class="fas fa-language language-icon"></i>
-                    <div>
-                        <h3>Ewe, Kabyè, Yoruba</h3>
-                        <p>Advanced</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact">
         <div class="container">
             <h2>Contact</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope contact-icon"></i>
-                    <div>
-                        <h3>Email</h3>
-                        <p><a href="mailto:lassissimoubarak20@gmail.com">lassissimoubarak20@gmail.com</a></p>
-                    </div>
+            <div class="contact-info" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="contact-item" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: var(--shadow);">
+                    <i class="fas fa-envelope" style="font-size: 2rem; color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:lassissimoubarak20@gmail.com" style="color: var(--primary-color); text-decoration: none;">lassissimoubarak20@gmail.com</a></p>
                 </div>
-
-                <div class="contact-item">
-                    <i class="fab fa-linkedin contact-icon"></i>
-                    <div>
-                        <h3>LinkedIn</h3>
-                        <p><a href="https://www.linkedin.com/in/moubarak-lassissi-610b87202" target="_blank">linkedin.com/in/moubarak-lassissi-610b87202</a></p>
-                    </div>
+                
+                <div class="contact-item" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: var(--shadow);">
+                    <i class="fab fa-linkedin" style="font-size: 2rem; color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://www.linkedin.com/in/moubarak-lassissi-610b87202" target="_blank" style="color: var(--primary-color); text-decoration: none;">linkedin.com/in/moubarak-lassissi</a></p>
                 </div>
-
-                <div class="contact-item">
-                    <i class="fab fa-github contact-icon"></i>
-                    <div>
-                        <h3>GitHub</h3>
-                        <p><a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak" target="_blank">github.com/LASSISSIMoubarak</a></p>
-                    </div>
+                
+                <div class="contact-item" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: var(--shadow);">
+                    <i class="fab fa-github" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h3>GitHub</h3>
+                    <p><a href="https://github.com/LASSISSIMoubarak" target="_blank" style="color: var(--primary-color); text-decoration: none;">github.com/LASSISSIMoubarak</a></p>
                 </div>
             </div>
         </div>
@@ -314,8 +604,52 @@
 
     <footer>
         <div class="container">
-            &copy; 2025 Moubarak LASSISSI - Data Scientist & Statistical Engineer
+            <p>&copy; 2024 Moubarak LASSISSI - Data Scientist & Statistical Engineer</p>
+            <p style="margin-top: 1rem; opacity: 0.8; font-size: 0.9rem;">
+                <a href="https://github.com/LASSISSIMoubarak" style="color: white; text-decoration: none;" target="_blank">
+                    <i class="fab fa-github"></i> Voir tous mes projets sur GitHub
+                </a>
+            </p>
         </div>
     </footer>
 
+    <script>
+        // Smooth scroll pour navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe les sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'all 0.6s ease-out';
+            observer.observe(section);
+        });
+    </script>
 </body>
+</html>
