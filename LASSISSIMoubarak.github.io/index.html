@@ -3,211 +3,516 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Moubarak LASSISSI - Portfolio Data Scientist & Ingénieur Statisticien</title>
+    <title>Moubarak LASSISSI | Data Scientist & Ingénieur Statisticien</title>
+    <meta name="description" content="Portfolio de Moubarak LASSISSI, data scientist et ingénieur statisticien spécialisé en analyse de données, machine learning et Power Platform.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-            --text-color: #333;
-            --transition: all 0.3s ease;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --bg: #050b16;
+            --bg-2: #0d1729;
+            --panel: rgba(15, 23, 42, 0.76);
+            --panel-strong: rgba(15, 23, 42, 0.92);
+            --line: rgba(148, 163, 184, 0.18);
+            --primary: #8b5cf6;
+            --secondary: #38bdf8;
+            --accent: #34d399;
+            --text: #edf2ff;
+            --muted: #aab7cc;
+            --shadow: 0 28px 70px rgba(5, 9, 20, 0.45);
+            --radius: 24px;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html,body{height:100%;}
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            margin: 0;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(139, 92, 246, 0.18), transparent 24%),
+                radial-gradient(circle at right, rgba(56, 189, 248, 0.14), transparent 28%),
+                linear-gradient(180deg, var(--bg) 0%, #091423 100%);
+            color: var(--text);
+            line-height: 1.7;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        nav { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); position: sticky; top:0; z-index:1000; box-shadow: var(--shadow); }
-        .nav-container { display:flex; justify-content:space-between; align-items:center; padding:1rem 0; position:relative; }
-        .logo { font-size:1.25rem; font-weight:700; color:var(--primary-color); text-decoration:none; }
-        .nav-links { display:flex; gap:1.5rem; list-style:none; align-items:center; }
-        .nav-links a { text-decoration:none; color:var(--primary-color); font-weight:500; transition:var(--transition); }
-        .nav-links a:hover{ color:var(--secondary-color); }
-        .nav-toggle { display:none; background:transparent; border:0; font-size:1.25rem; cursor:pointer; color:var(--primary-color); }
 
-        header { background: linear-gradient(135deg, var(--primary-color) 0%, #1a252f 100%); color: white; padding: 4rem 0; position: relative; overflow: hidden; }
-        .header-content { display:grid; grid-template-columns: auto 1fr; gap:2.5rem; align-items:center; }
-        .profile-img { width:100%; max-width:200px; height:auto; border-radius:50%; object-fit:cover; border:4px solid rgba(255,255,255,0.2); box-shadow:0 10px 30px rgba(0,0,0,0.3); }
-        .hero-text h1 { font-size:2.8rem; margin-bottom:0.5rem; background:linear-gradient(90deg,#fff,#3498db); -webkit-background-clip:text; background-clip:text; color:transparent; }
-        .tagline { font-size:1.15rem; font-weight:300; margin-bottom:1rem; opacity:0.95; }
-        .cta-buttons { display:flex; gap:1rem; margin-top:1.5rem; }
-        .btn{ padding:0.7rem 1.4rem; border-radius:30px; text-decoration:none; font-weight:600; transition:var(--transition); display:inline-flex; align-items:center; gap:0.5rem; }
-        .btn-primary{ background:var(--secondary-color); color:white; }
-        .btn-outline{ border:2px solid white; color:white; background:transparent; }
+        a { color: inherit; }
+        img { display: block; max-width: 100%; }
 
-        section{ padding:4rem 0; }
-        section:nth-child(even){ background:white; }
-        h2{ font-size:2.2rem; margin-bottom:2rem; color:var(--primary-color); position:relative; display:inline-block; }
-        h2::after{ content:''; position:absolute; bottom:-10px; left:0; width:60px; height:4px; background:linear-gradient(90deg,var(--secondary-color),var(--accent-color)); border-radius:2px; }
+        .container {
+            width: min(1180px, calc(100% - 28px));
+            margin: 0 auto;
+        }
 
-        .projects-grid{ display:grid; grid-template-columns: repeat(auto-fill,minmax(320px,1fr)); gap:1.8rem; margin-top:1rem; }
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(5, 11, 22, 0.7);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+        }
 
-        /* === Modern Cards === */
-        .project-card{
-            background: rgba(255,255,255,0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
-            border: 1px solid rgba(255,255,255,0.9);
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 72px;
+        }
+
+        .logo {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 900;
+            letter-spacing: 0.14em;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.7rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--muted);
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover { color: #fff; }
+
+        .nav-toggle {
+            display: none;
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            border: 1px solid var(--line);
+            background: transparent;
+            color: white;
+            cursor: pointer;
+        }
+
+        header {
+            padding: 88px 0 72px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.08fr 0.92fr;
+            gap: 42px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 0.55rem 0.9rem;
+            border-radius: 999px;
+            background: rgba(139, 92, 246, 0.12);
+            border: 1px solid rgba(139, 92, 246, 0.35);
+            color: #ddd2ff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            margin: 1rem 0 0.8rem;
+            line-height: 1.04;
+            letter-spacing: -0.06em;
+            font-size: clamp(2.8rem, 4vw, 4.7rem);
+            font-weight: 900;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #8b5cf6, #38bdf8, #67e8f9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .tagline {
+            display: inline-block;
+            color: #f1f5ff;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.08rem;
+        }
+
+        .hero p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            text-decoration: none;
+            padding: 0.9rem 1.45rem;
+            border-radius: 999px;
+            font-weight: 700;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover { transform: translateY(-2px); }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #5b8cff);
+            color: white;
+            box-shadow: 0 18px 35px rgba(91, 140, 255, 0.28);
+        }
+
+        .btn-secondary {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            color: white;
+        }
+
+        .hero-card {
             position: relative;
-            transition: transform 0.4s cubic-bezier(0.175,0.885,0.32,1.275), box-shadow 0.4s ease, opacity 0.5s ease;
-            opacity: 0;
-            transform: translateY(30px);
+            padding: 30px 24px 22px;
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            background: linear-gradient(180deg, rgba(17, 24, 39, 0.9), rgba(15, 23, 42, 0.75));
+            box-shadow: var(--shadow);
         }
-        .project-card.visible{
+
+        .hero-card::before {
+            content: "";
+            position: absolute;
+            inset: 10px;
+            border-radius: 22px;
+            border: 1px solid rgba(139, 92, 246, 0.28);
+            pointer-events: none;
+        }
+
+        .profile-photo {
+            position: relative;
+            z-index: 1;
+            width: min(100%, 360px);
+            margin: 0 auto 18px;
+            border-radius: 26px;
+            border: 1px solid rgba(255,255,255,0.14);
+            box-shadow: 0 18px 40px rgba(9, 11, 26, 0.52);
+        }
+
+        .metrics {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 16px 10px;
+            border-radius: 18px;
+            background: rgba(148, 163, 184, 0.06);
+            border: 1px solid rgba(148, 163, 184, 0.14);
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+        }
+
+        .stat span {
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        section {
+            padding: 82px 0;
+        }
+
+        .section-header {
+            margin-bottom: 28px;
+        }
+
+        .section-label {
+            color: #b9d0ff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 0.65rem;
+        }
+
+        h2 {
+            margin: 0;
+            color: #fff;
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+        }
+
+        .about-grid,
+        .skills-grid,
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .info-card,
+        .skill-card,
+        .contact-card {
+            background: rgba(17, 24, 39, 0.76);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 26px 22px;
+        }
+
+        .info-card h3,
+        .skill-card h3,
+        .contact-card h3 {
+            margin: 0 0 12px;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .info-card p,
+        .skill-card p,
+        .contact-card p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .icon-box {
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.18), rgba(56, 189, 248, 0.18));
+            border: 1px solid rgba(139, 92, 246, 0.28);
+            color: #dfeaff;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .project-card {
+            background: rgba(17, 24, 39, 0.82);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(18px);
+            transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .project-card.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        /* Gradient top accent */
-        .project-card::before{
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            border-radius: 20px 20px 0 0;
-        }
-        /* Hover shimmer overlay */
-        .project-card::after{
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-            border-radius: 20px;
-        }
-        .project-card:hover{
-            transform: translateY(-10px) scale(1.015);
-            box-shadow: 0 24px 60px rgba(102,126,234,0.22), 0 8px 20px rgba(0,0,0,0.08);
-        }
-        .project-card:hover::after{ opacity: 1; }
 
-        .project-content{ padding: 1.6rem; }
-        .project-content h3{ font-size: 1.05rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.5rem; display:flex; align-items:center; gap:0.55rem; }
-        .card-icon{
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(56, 189, 248, 0.55);
+            box-shadow: 0 35px 60px rgba(8, 15, 28, 0.54);
+        }
+
+        .project-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin: 0 0 0.8rem;
+            color: white;
+            font-size: 1.08rem;
+        }
+
+        .card-icon {
+            width: 38px;
+            height: 38px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 2rem;
-            height: 2rem;
-            border-radius: 10px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            font-size: 0.85rem;
-            flex-shrink: 0;
-        }
-        .skill-category h3{ display:flex; align-items:center; gap:0.5rem; font-size:1rem; font-weight:700; color:var(--primary-color); }
-        .skill-icon{
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 1.8rem;
-            height: 1.8rem;
-            border-radius: 8px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            font-size: 0.78rem;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.25), rgba(56, 189, 248, 0.18));
+            border: 1px solid rgba(139, 92, 246, 0.35);
+            color: #e5ebff;
             flex-shrink: 0;
         }
 
-        .project-meta{ display:flex; gap:0.45rem; margin:0.9rem 0; flex-wrap:wrap; }
-        .tech-badge{
-            background: linear-gradient(135deg, rgba(102,126,234,0.12), rgba(118,75,162,0.12));
-            color: #5a3e9b;
-            padding: 0.25rem 0.75rem;
-            border-radius: 30px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            border: 1px solid rgba(102,126,234,0.25);
-            letter-spacing: 0.02em;
-            transition: background 0.25s ease, transform 0.2s ease;
+        .project-card p {
+            margin: 0;
+            color: var(--muted);
         }
-        .tech-badge:hover{ background: linear-gradient(135deg,rgba(102,126,234,0.25),rgba(118,75,162,0.25)); transform: scale(1.07); }
 
-        .project-links{ display:flex; gap:0.7rem; margin-top:1.2rem; padding-top:1rem; border-top: 1px solid rgba(0,0,0,0.06); flex-wrap:wrap; }
-        .github-link, .demo-link{
-            display: inline-flex;
-            align-items: center;
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
             gap: 0.45rem;
-            padding: 0.5rem 1rem;
-            border-radius: 30px;
-            text-decoration: none;
+            margin: 1rem 0 0.9rem;
+        }
+
+        .tech-badge {
+            display: inline-flex;
+            border-radius: 999px;
+            padding: 0.38rem 0.7rem;
+            background: rgba(148, 163, 184, 0.07);
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            color: #e6efff;
+            font-size: 0.7rem;
             font-weight: 600;
-            font-size: 0.85rem;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
         }
-        .github-link{
-            background: linear-gradient(135deg, #2c3e50, #34495e);
+
+        .project-links {
+            margin-top: 1.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+        }
+
+        .github-link,
+        .demo-link {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-radius: 999px;
+            padding: 0.72rem 0.95rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            transition: transform 0.2s ease;
+        }
+
+        .github-link:hover,
+        .demo-link:hover { transform: translateY(-2px); }
+
+        .github-link {
+            background: white;
+            color: #0b1220;
+        }
+
+        .demo-link {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            color: #e6f4ff;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1rem;
+        }
+
+        .skill-item {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.52rem 0.8rem;
+            border-radius: 999px;
+            background: rgba(139, 92, 246, 0.08);
+            border: 1px solid rgba(139, 92, 246, 0.18);
+            color: #f1ebff;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .contact-card a {
             color: white;
-            box-shadow: 0 3px 10px rgba(44,62,80,0.25);
-        }
-        .github-link:hover{
-            transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(44,62,80,0.35);
-            background: linear-gradient(135deg, #1a252f, #2c3e50);
-        }
-        .demo-link{
-            background: transparent;
-            color: #667eea;
-            border: 2px solid #667eea;
-        }
-        .demo-link:hover{
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border-color: transparent;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(102,126,234,0.35);
+            text-decoration: none;
         }
 
-        .skills-grid{ display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:1rem; margin-top:1rem; }
-        .skill-category{ background:white; padding:1.2rem; border-radius:12px; box-shadow:var(--shadow); }
-        .skill-list{ display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:0.8rem; }
-        .skill-item{ background:linear-gradient(135deg,#f8f9fa,#e9ecef); padding:0.45rem 0.9rem; border-radius:20px; font-size:0.9rem; font-weight:500; border:1px solid #dee2e6; }
-
-        footer{ background:var(--dark-color); color:white; padding:2rem 0; text-align:center; }
-
-        /* Responsive */
-        @media (max-width: 980px){
-            .header-content{ grid-template-columns: 1fr; text-align:center; }
-            .nav-links{ display:none; }
-            .nav-toggle{ display:block; }
+        footer {
+            padding: 30px 0 60px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            text-align: center;
         }
 
-        @media (max-width: 480px){
-            .hero-text h1{ font-size:1.8rem; }
-            h2{ font-size:1.4rem; }
-            .projects-grid{ grid-template-columns: 1fr; }
+        @media (max-width: 980px) {
+            .hero,
+            .about-grid,
+            .skills-grid,
+            .projects-grid,
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .cta-row {
+                justify-content: center;
+            }
         }
 
-        /* Mobile menu open state */
-        .nav-links.open{ display:flex; flex-direction:column; gap:0.8rem; position:absolute; right:20px; top:64px; background:white; padding:1rem; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.12); }
-        .nav-links.open a{ color:var(--primary-color); }
+        @media (max-width: 720px) {
+            .nav-links { display: none; }
+            .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+
+            .about-grid,
+            .skills-grid,
+            .projects-grid,
+            .contact-grid,
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                margin-bottom: 18px;
+            }
+        }
+
+        .nav-links.open {
+            display: flex;
+            position: absolute;
+            right: 12px;
+            top: 76px;
+            flex-direction: column;
+            gap: 0.8rem;
+            background: rgba(12, 18, 29, 0.96);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 1rem 1.2rem;
+            box-shadow: var(--shadow);
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
         <div class="container nav-container">
-            <a href="#" class="logo">ML</a>
-            <button class="nav-toggle" aria-expanded="false" aria-label="Basculer la navigation">
+            <a href="#top" class="logo">ML</a>
+            <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links">
-                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#about">À propos</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#skills">Compétences</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -215,38 +520,60 @@
         </div>
     </nav>
 
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <img src="Moubarak.png" alt="Moubarak LASSISSI" class="profile-img">
-                <div class="hero-text">
-                    <h1>Moubarak LASSISSI</h1>
-                    <p class="tagline">Analyste de données • Data Scientist • Ingénieur Statisticien</p>
-                    <p>Je conçois des solutions d’analyse de données, de modélisation prédictive et d’automatisation de processus à partir de cas concrets. Je travaille avec les outils Microsoft et Power Platform : Power BI, Power Automate, Power Apps, SharePoint, Excel, PowerPoint.</p>
-                    <div class="cta-buttons">
-                        <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> Voir mes projets</a>
-                        <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak" class="btn btn-outline" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+    <header id="top">
+        <div class="container hero">
+            <div>
+                <span class="eyebrow"><i class="fas fa-sparkles"></i> Data & IA</span>
+                <h1><span class="gradient-text">Agilité</span> • Esprit d'équipe • Action</h1>
+                <span class="tagline">Data Scientist • Ingénieur Statisticien • Analyste de données</span>
+                <p>Analyse • Modélisation • Automatisation • Décisions orientées business.</p>
+                <div class="cta-row">
+                    <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> Voir mes projets</a>
+                    <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak" class="btn btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <img src="Moubarak.png" alt="Moubarak LASSISSI" class="profile-photo">
+                <div class="metrics">
+                    <div class="stat">
+                        <strong>ML</strong>
+                        <span>Portfolio</span>
+                    </div>
+                    <div class="stat">
+                        <strong>AI</strong>
+                        <span>Analyse</span>
+                    </div>
+                    <div class="stat">
+                        <strong>BI</strong>
+                        <span>Business</span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="experience">
+    <section id="about">
         <div class="container">
-            <h2>Expérience & centres d’intérêt</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="skill-icon fas fa-chart-line"></i> Analyse de données complexes</h3>
-                    <p>J’ai travaillé sur des jeux de données variés en transport, biologie et sciences environnementales, avec une forte attention à l’exploration, à la validation statistique et à l’interprétation métier.</p>
+            <div class="section-header">
+                <div class="section-label">À propos</div>
+                <h2>Mon approche</h2>
+            </div>
+            <div class="about-grid">
+                <div class="info-card">
+                    <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+                    <h3>Analyse de données</h3>
+                    <p>Je transforme des données complexes en indicateurs exploitables, avec une logique d’analyse claire et orientée décision.</p>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="skill-icon fas fa-robot"></i> Modélisation prédictive</h3>
-                    <p>Je développe des solutions de machine learning et de séries temporelles pour la prédiction, la classification et l’optimisation de performances.</p>
+                <div class="info-card">
+                    <div class="icon-box"><i class="fas fa-robot"></i></div>
+                    <h3>Modélisation</h3>
+                    <p>Je conçois des modèles de prédiction et d’analyse statistique pour répondre à des problématiques concrètes en transport, santé et gestion.</p>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="skill-icon fas fa-gears"></i> MLOps & déploiement</h3>
-                    <p>J’intègre des pratiques de structuration de projet, de conteneurisation, de déploiement et de suivi de modèles afin de rendre les solutions plus robustes et reproductibles.</p>
+                <div class="info-card">
+                    <div class="icon-box"><i class="fas fa-gears"></i></div>
+                    <h3>Automatisation</h3>
+                    <p>Je mets en place des solutions plus efficaces grâce à l’automatisation, la structuration et les outils Microsoft Power Platform.</p>
                 </div>
             </div>
         </div>
@@ -254,209 +581,134 @@
 
     <section id="projects">
         <div class="container">
-            <h2>Projets phares</h2>
+            <div class="section-header">
+                <div class="section-label">Projets</div>
+                <h2>Expériences concrètes</h2>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3><i class="card-icon fas fa-train"></i> Challenge SNCF – Prédiction de trafic ferroviaire</h3>
-                        <div class="project-meta">
-                            <span class="tech-badge">Time Series</span>
-                            <span class="tech-badge">SARIMA</span>
-                            <span class="tech-badge">XGBoost</span>
-                            <span class="tech-badge">Python</span>
-                        </div>
-                        <p>Analyse exploratoire et modélisation prédictive d’un problème de trafic ferroviaire avec validation sur Data Challenge.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Data%20challenge" class="github-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Dossier du projet</a>
-                            <a href="Rapport.pdf" class="demo-link" target="_blank" rel="noopener"><i class="fas fa-chart-bar"></i> Rapport</a>
-                        </div>
+                <article class="project-card">
+                    <h3><span class="card-icon"><i class="fas fa-train"></i></span> Challenge SNCF</h3>
+                    <div class="project-meta">
+                        <span class="tech-badge">Time Series</span>
+                        <span class="tech-badge">SARIMA</span>
+                        <span class="tech-badge">XGBoost</span>
                     </div>
-                </div>
+                    <p>Analyse exploratoire et modélisation prédictive d’un enjeu de trafic ferroviaire avec validation sur un Data Challenge.</p>
+                    <div class="project-links">
+                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Data%20challenge" target="_blank" rel="noopener"><i class="fab fa-github"></i> Dossier</a>
+                        <a class="demo-link" href="Rapport.pdf" target="_blank" rel="noopener"><i class="fas fa-chart-bar"></i> Rapport</a>
+                    </div>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3><i class="card-icon fas fa-server"></i> Projet MLOps – Prédiction du temps de survie des patients</h3>
-                        <div class="project-meta">
-                            <span class="tech-badge">MLOps</span>
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Survival Analysis</span>
-                            <span class="tech-badge">Packaging</span>
-                        </div>
-                        <p>Structuration d’un projet Python autour d’un pipeline de prédiction du temps de survie des patients atteints de cancer, avec une organisation de code claire et des pratiques MLOps adaptées.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/mlops" class="github-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir le projet</a>
-                        </div>
+                <article class="project-card">
+                    <h3><span class="card-icon"><i class="fas fa-heartbeat"></i></span> MLOps – Survie des patients</h3>
+                    <div class="project-meta">
+                        <span class="tech-badge">MLOps</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Survival Analysis</span>
                     </div>
-                </div>
+                    <p>Structuration d’un pipeline de prédiction avec organisation de code et bonnes pratiques MLOps.</p>
+                    <div class="project-links">
+                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/mlops" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir le projet</a>
+                    </div>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3><i class="card-icon fas fa-chart-pie"></i> Application Shiny CATPCA</h3>
-                        <div class="project-meta">
-                            <span class="tech-badge">R</span>
-                            <span class="tech-badge">Shiny</span>
-                            <span class="tech-badge">PCA</span>
-                            <span class="tech-badge">Visualisation</span>
-                        </div>
-                        <p>Développement d’une application interactive pour explorer des analyses multivariées et des méthodes de réduction de dimension.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/R_project/CATPCA" class="github-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir l’application</a>
-                        </div>
+                <article class="project-card">
+                    <h3><span class="card-icon"><i class="fas fa-chart-pie"></i></span> Shiny CATPCA</h3>
+                    <div class="project-meta">
+                        <span class="tech-badge">R</span>
+                        <span class="tech-badge">Shiny</span>
+                        <span class="tech-badge">PCA</span>
                     </div>
-                </div>
+                    <p>Application interactive pour explorer des méthodes d’analyse multivariée et de réduction de dimension.</p>
+                    <div class="project-links">
+                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/R_project/CATPCA" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir l’app</a>
+                    </div>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3><i class="card-icon fas fa-bullseye"></i> Modélisation bayésienne avec Stan</h3>
-                        <div class="project-meta">
-                            <span class="tech-badge">Bayesian</span>
-                            <span class="tech-badge">Stan</span>
-                            <span class="tech-badge">R</span>
-                            <span class="tech-badge">MCMC</span>
-                        </div>
-                        <p>Mise en place d’un modèle bayésien pour étudier des effets et des médiations à partir de données statistiques complexes.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Modelisation%20Bay%C3%A9sienne" class="github-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Accéder au dossier</a>
-                        </div>
+                <article class="project-card">
+                    <h3><span class="card-icon"><i class="fas fa-bullseye"></i></span> Modélisation bayésienne</h3>
+                    <div class="project-meta">
+                        <span class="tech-badge">Bayesian</span>
+                        <span class="tech-badge">Stan</span>
+                        <span class="tech-badge">R</span>
                     </div>
-                </div>
+                    <p>Mise en place d’un modèle bayésien pour analyser des effets et médiations dans des données complexes.</p>
+                    <div class="project-links">
+                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Modelisation%20Bay%C3%A9sienne" target="_blank" rel="noopener"><i class="fab fa-github"></i> Accéder</a>
+                    </div>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3><i class="card-icon fas fa-eye"></i> Traitement d’images & segmentation</h3>
-                        <div class="project-meta">
-                            <span class="tech-badge">Computer Vision</span>
-                            <span class="tech-badge">CNN</span>
-                            <span class="tech-badge">TensorFlow</span>
-                            <span class="tech-badge">Segmentation</span>
-                        </div>
-                        <p>Travaux autour de la vision par ordinateur, de la classification d’images et de la segmentation avec notebooks et expérimentations détaillées.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak" class="github-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir les notebooks</a>
-                        </div>
+                <article class="project-card">
+                    <h3><span class="card-icon"><i class="fas fa-eye"></i></span> Vision par ordinateur</h3>
+                    <div class="project-meta">
+                        <span class="tech-badge">CNN</span>
+                        <span class="tech-badge">TensorFlow</span>
+                        <span class="tech-badge">Segmentation</span>
                     </div>
-                </div>
+                    <p>Exploration autour de la classification d’images et techniques de segmentation avec notebooks d’expérimentation.</p>
+                    <div class="project-links">
+                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak" target="_blank" rel="noopener"><i class="fab fa-github"></i> Notebooks</a>
+                    </div>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3><i class="card-icon fas fa-server"></i> Big Data & Spark</h3>
-                        <div class="project-meta">
-                            <span class="tech-badge">Big Data</span>
-                            <span class="tech-badge">Spark</span>
-                            <span class="tech-badge">MapReduce</span>
-                            <span class="tech-badge">Flask</span>
-                        </div>
-                        <p>Implémentation de pipelines de traitement distribués et d’analyses scalables autour de Spark, MapReduce et services web.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Big%20data" class="github-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Explorer le code</a>
-                        </div>
+                <article class="project-card">
+                    <h3><span class="card-icon"><i class="fas fa-database"></i></span> Big Data & Spark</h3>
+                    <div class="project-meta">
+                        <span class="tech-badge">Spark</span>
+                        <span class="tech-badge">MapReduce</span>
+                        <span class="tech-badge">Flask</span>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3><i class="card-icon fas fa-globe"></i> Applications web Flask</h3>
-                        <div class="project-meta">
-                            <span class="tech-badge">Flask</span>
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">Templates</span>
-                            <span class="tech-badge">API</span>
-                        </div>
-                        <p>Développement de petites applications web et de prototypes interactifs pour exposer des résultats et des traitements de données.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Projet%20Flask" class="github-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir l’application</a>
-                        </div>
+                    <p>Implémentation de pipelines distribués pour traiter de grands volumes de données et produire des analyses scalables.</p>
+                    <div class="project-links">
+                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Big%20data" target="_blank" rel="noopener"><i class="fab fa-github"></i> Explorer</a>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3><i class="card-icon fas fa-brain"></i> NLP & Deep Learning</h3>
-                        <div class="project-meta">
-                            <span class="tech-badge">NLP</span>
-                            <span class="tech-badge">Deep Learning</span>
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Transformers</span>
-                        </div>
-                        <p>Exploration de techniques de traitement automatique du langage et d’apprentissage profond autour de projets de recherche et d’expérimentation.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/NLP" class="github-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir le dossier</a>
-                        </div>
-                    </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
     <section id="skills">
         <div class="container">
-            <h2>Compétences Techniques</h2>
+            <div class="section-header">
+                <div class="section-label">Compétences</div>
+                <h2>Stack technique</h2>
+            </div>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="skill-icon fas fa-microsoft"></i> Microsoft  & Power Platform</h3>
+                <div class="skill-card">
+                    <div class="icon-box"><i class="fas fa-microsoft"></i></div>
+                    <h3>Power Platform</h3>
                     <div class="skill-list">
                         <span class="skill-item">Power BI</span>
-                        <span class="skill-item">Power Automate</span>
                         <span class="skill-item">Power Apps</span>
+                        <span class="skill-item">Power Automate</span>
                         <span class="skill-item">SharePoint</span>
-                        <span class="skill-item">Excel avancé</span>
+                        <span class="skill-item">Excel</span>
                         <span class="skill-item">PowerPoint</span>
-                        <span class="skill-item">Teams</span>
-                        <span class="skill-item">OneDrive</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="skill-icon fas fa-robot"></i> Machine Learning</h3>
+                <div class="skill-card">
+                    <div class="icon-box"><i class="fas fa-brain"></i></div>
+                    <h3>Machine Learning</h3>
                     <div class="skill-list">
-                        <span class="skill-item">Regression</span>
-                        <span class="skill-item">Random Forest</span>
+                        <span class="skill-item">Python</span>
                         <span class="skill-item">XGBoost</span>
                         <span class="skill-item">SVM</span>
-                        <span class="skill-item">Clustering</span>
                         <span class="skill-item">PCA</span>
                         <span class="skill-item">Time Series</span>
+                        <span class="skill-item">Scikit-learn</span>
                     </div>
                 </div>
-
-                <div class="skill-category">
-                    <h3><i class="skill-icon fas fa-brain"></i> Deep Learning</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">MLP</span>
-                        <span class="skill-item">CNN</span>
-                        <span class="skill-item">RNN/LSTM</span>
-                        <span class="skill-item">YOLO</span>
-                        <span class="skill-item">Transformers</span>
-                        <span class="skill-item">NLP / LLM</span>
-                        <span class="skill-item">TensorFlow</span>
-                        <span class="skill-item">PyTorch</span>
-                        <span class="skill-item">Transfer Learning</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="skill-icon fas fa-gears"></i> MLOps & Big Data</h3>
+                <div class="skill-card">
+                    <div class="icon-box"><i class="fas fa-gears"></i></div>
+                    <h3>MLOps & Data</h3>
                     <div class="skill-list">
                         <span class="skill-item">Docker</span>
-                        <span class="skill-item">MLflow</span>
-                        <span class="skill-item">Airflow</span>
                         <span class="skill-item">Spark</span>
-                        <span class="skill-item">Hadoop</span>
-                        <span class="skill-item">FastAPI</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="skill-icon fas fa-chart-pie"></i> Data Analysis & Business Intelligence</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Power BI</span>
-                        <span class="skill-item">Power Automate</span>
-                        <span class="skill-item">Power Apps</span>
-                        <span class="skill-item">SharePoint</span>
-                        <span class="skill-item">Excel avancé</span>
-                        <span class="skill-item">PowerPoint</span>
                         <span class="skill-item">SQL</span>
-                        <span class="skill-item">Python (pandas, numpy)</span>
-                        <span class="skill-item">R (tidyverse)</span>
+                        <span class="skill-item">R</span>
+                        <span class="skill-item">FastAPI</span>
+                        <span class="skill-item">Flask</span>
                     </div>
                 </div>
             </div>
@@ -465,22 +717,25 @@
 
     <section id="contact">
         <div class="container">
-            <h2>Contact</h2>
-            <div class="contact-info" style="display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:1rem;">
-                <div class="contact-item" style="background:white; padding:1rem; border-radius:12px; box-shadow:var(--shadow);">
-                    <i class="fas fa-envelope" style="font-size:1.6rem; color:var(--secondary-color); margin-bottom:0.6rem;"></i>
+            <div class="section-header">
+                <div class="section-label">Contact</div>
+                <h2>Travaillons ensemble</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="icon-box"><i class="fas fa-envelope"></i></div>
                     <h3>Email</h3>
-                    <p><a href="mailto:lassissimoubarak20@gmail.com" style="color:var(--primary-color); text-decoration:none;">lassissimoubarak20@gmail.com</a></p>
+                    <p><a href="mailto:lassissimoubarak20@gmail.com">lassissimoubarak20@gmail.com</a></p>
                 </div>
-                <div class="contact-item" style="background:white; padding:1rem; border-radius:12px; box-shadow:var(--shadow);">
-                    <i class="fab fa-linkedin" style="font-size:1.6rem; color:var(--secondary-color); margin-bottom:0.6rem;"></i>
+                <div class="contact-card">
+                    <div class="icon-box"><i class="fab fa-linkedin"></i></div>
                     <h3>LinkedIn</h3>
-                    <p><a href="https://www.linkedin.com/in/moubarak-lassissi-610b87202" target="_blank" rel="noopener" style="color:var(--primary-color); text-decoration:none;">linkedin.com/in/moubarak-lassissi</a></p>
+                    <p><a href="https://www.linkedin.com/in/moubarak-lassissi-610b87202" target="_blank" rel="noopener">linkedin.com/in/moubarak-lassissi</a></p>
                 </div>
-                <div class="contact-item" style="background:white; padding:1rem; border-radius:12px; box-shadow:var(--shadow);">
-                    <i class="fab fa-github" style="font-size:1.6rem; color:var(--primary-color); margin-bottom:0.6rem;"></i>
+                <div class="contact-card">
+                    <div class="icon-box"><i class="fab fa-github"></i></div>
                     <h3>GitHub</h3>
-                    <p><a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak" target="_blank" rel="noopener" style="color:var(--primary-color); text-decoration:none;">github.com/LASSISSIMoubarak</a></p>
+                    <p><a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak" target="_blank" rel="noopener">github.com/LASSISSIMoubarak</a></p>
                 </div>
             </div>
         </div>
@@ -488,80 +743,44 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Moubarak LASSISSI - Data Scientist & Ingénieur Statisticien</p>
-            <p style="margin-top:0.6rem; opacity:0.85; font-size:0.9rem;"><a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main" target="_blank" rel="noopener" style="color:white; text-decoration:none;"><i class="fab fa-github"></i> Voir tous mes projets sur GitHub</a></p>
+            <p>© 2026 Moubarak LASSISSI — Data Scientist & Ingénieur Statisticien</p>
         </div>
     </footer>
 
     <script>
-        // Mobile nav toggle
         const navToggle = document.querySelector('.nav-toggle');
         const navLinks = document.querySelector('.nav-links');
-        navToggle && navToggle.addEventListener('click', () => {
-            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-            navToggle.setAttribute('aria-expanded', String(!expanded));
-            navLinks.classList.toggle('open');
+
+        navToggle.addEventListener('click', () => {
+            const open = navLinks.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', String(open));
         });
 
-        // Smooth scroll for internal links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (!href || href === '#') return;
-                const target = document.querySelector(href);
-                if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    // close mobile menu after click
-                    if (navLinks.classList.contains('open')) {
-                        navLinks.classList.remove('open');
-                        navToggle.setAttribute('aria-expanded', 'false');
-                    }
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
+                if (!target) return;
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                if (navLinks.classList.contains('open')) {
+                    navLinks.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
                 }
             });
         });
 
-        // Staggered card entrance animation
-        const cardObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry, i) => {
-                if (entry.isIntersecting) {
-                    const card = entry.target;
-                    const delay = Array.from(card.parentElement.children).indexOf(card) * 80;
-                    setTimeout(() => card.classList.add('visible'), delay);
-                    cardObserver.unobserve(card);
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-        document.querySelectorAll('.project-card').forEach(card => cardObserver.observe(card));
-
-        // Section fade-in
-        const sectionObserver = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.05, rootMargin: '0px 0px -50px 0px' });
-        document.querySelectorAll('section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'all 0.6s ease-out';
-            sectionObserver.observe(section);
-        });
+        }, { threshold: 0.12 });
 
-        // Subtle 3D tilt on card hover
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('mousemove', e => {
-                const rect = card.getBoundingClientRect();
-                const x = (e.clientX - rect.left) / rect.width - 0.5;
-                const y = (e.clientY - rect.top) / rect.height - 0.5;
-                card.style.transform = `translateY(-10px) scale(1.015) rotateX(${-y * 6}deg) rotateY(${x * 6}deg)`;
-            });
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = '';
-            });
-        });
+        document.querySelectorAll('.project-card').forEach(card => observer.observe(card));
     </script>
 </body>
 </html>
