@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Moubarak LASSISSI | Data Analyst & Scientist | BI, Machine Learning & Santé</title>
-    <meta name="description" content="Portfolio de Moubarak LASSISSI, Data Analyst & Scientist spécialisé en BI, machine learning et applications de la donnée en santé.">
+    <title>Moubarak LASSISSI | Data Analyst, Data Scientist & Data Engineer</title>
+    <meta name="description" content="Data Analyst, Data Scientist et Data Engineer, spécialisé en analyse de données, machine learning, modélisation statistique et pipelines. Python, PyTorch, R, SQL. Expériences en aéronautique, océanographie, génétique statistique et santé ; intérêt pour la défense.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -173,6 +173,11 @@
             margin: 0;
             color: #59645f;
             font-size: 1.06rem;
+        }
+
+        .hero .sector-line {
+            margin-top: 0.8rem;
+            font-size: 0.92rem;
         }
 
         .hero-contact {
@@ -481,6 +486,16 @@
             color: #ffffff;
         }
 
+        .experience-list {
+            margin: 0;
+            padding-left: 1.2rem;
+            color: #52605a;
+        }
+
+        .experience-list li + li {
+            margin-top: 0.55rem;
+        }
+
         .project-meta {
             display: flex;
             flex-wrap: wrap;
@@ -749,6 +764,7 @@
             </button>
             <ul class="nav-links">
                 <li><a href="#about">À propos</a></li>
+                <li><a href="#experience">Expérience</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#skills">Compétences</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -760,7 +776,10 @@
         <div class="container hero">
             <div>
                 <span class="eyebrow"><i class="fas fa-sparkles"></i> Data & IA</span>
-                <h1>Data Analyst &amp; Scientist | BI, Machine Learning &amp; Santé</h1>
+                <h1>Data Analyst · Data Scientist · Data Engineer</h1>
+                <span class="tagline">Analyse de données • Machine Learning • Modélisation statistique • Pipelines</span>
+                <p>J’analyse et transforme les données en solutions fiables, de la préparation et des indicateurs à la modélisation statistique, au machine learning et à l’industrialisation des pipelines.</p>
+                <p class="sector-line"><strong>Secteurs :</strong> aéronautique, océanographie, génétique statistique et santé. Intérêt pour les applications à la défense.</p>
                 <div class="cta-row">
                     <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> Voir mes projets</a>
                     <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak" class="btn btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
@@ -801,7 +820,7 @@
                 <div class="section-label">À propos</div>
                 <h2>Mon approche</h2>
             </div>
-            <p class="about-lead">Double casquette Data Analyst &amp; Data Scientist, je combine une triple spécialisation en Business (Power BI, reporting, aide à la décision), en Recherche (modélisation statistique) et en Santé (biostatistique, génétique, oncologie). Grâce à ma maîtrise de Python, R, SQL et du Machine Learning, j’interviens de l’analyse exploratoire jusqu’à la fiabilisation des données pour les solutions IA.</p>
+            <p class="about-lead">Data Analyst, Data Scientist et Data Engineer, je relie analyse de données, modélisation statistique et construction de solutions data. Mes expériences portent sur le reporting et le déploiement de modèles en aéronautique, la génétique statistique, ainsi que le contrôle qualité et le monitoring de données océanographiques à grande échelle. Je mobilise Python, PyTorch, R et SQL selon les besoins du projet. Je m’intéresse également aux applications de ces compétences dans le secteur de la défense.</p>
             <div class="about-grid">
                 <div class="info-card">
                     <div class="icon-box"><i class="fas fa-chart-line"></i></div>
@@ -815,9 +834,74 @@
                 </div>
                 <div class="info-card">
                     <div class="icon-box"><i class="fas fa-gears"></i></div>
-                    <h3>Automatisation</h3>
-                    <p>Je mets en place des solutions plus efficaces grâce à l’automatisation, la structuration et les outils Microsoft Power Platform.</p>
+                    <h3>Data engineering & MLOps</h3>
+                    <p>Je structure des pipelines ETL/ELT, contrôle la qualité des données et contribue à l’industrialisation et au suivi des modèles.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Parcours professionnel</div>
+                <h2>Expériences</h2>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3><span class="card-icon"><i class="fas fa-chart-column"></i></span> Data Analyst & BI Specialist</h3>
+                    <div class="project-meta">
+                        <span class="tech-badge">Parker Aerospace</span>
+                        <span class="tech-badge">Avr. 2026 – Sept. 2026</span>
+                        <span class="tech-badge">Angers</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Conception et automatisation de rapports Power BI avec Power Automate.</li>
+                        <li>Exploration et traitement de données avec SQL, Power Query et DAX.</li>
+                        <li>Industrialisation et déploiement de modèles de machine learning avec Docker, Azure DevOps et Azure.</li>
+                        <li>Conception de pipelines ETL/ELT et traitement de jeux pouvant atteindre 300 000 lignes sur 800 colonnes avec multiprocessing.</li>
+                        <li>Application de principes de gouvernance des données.</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <h3><span class="card-icon"><i class="fas fa-dna"></i></span> Data Analyst – Génétique statistique & bioinformatique</h3>
+                    <div class="project-meta">
+                        <span class="tech-badge">Université d’Angers</span>
+                        <span class="tech-badge">Oct. 2025 – Mars 2026</span>
+                        <span class="tech-badge">Angers</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Analyses statistiques, dont ANOVA multifactorielle, pour étudier des effets génétiques et leurs interactions.</li>
+                        <li>Étude de tests du rapport de vraisemblance et de la détection de QTL par simulation sous différentes hypothèses.</li>
+                        <li>Analyse de réseaux de régulation génétique avec ARACNE et évaluation des réseaux reconstruits.</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <h3><span class="card-icon"><i class="fas fa-water"></i></span> Data Scientist | Data Engineer</h3>
+                    <div class="project-meta">
+                        <span class="tech-badge">PokaPok</span>
+                        <span class="tech-badge">Mars 2025 – Sept. 2025</span>
+                        <span class="tech-badge">Brest</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Contrôle qualité de plus de 4 millions d’observations océanographiques.</li>
+                        <li>Conception et optimisation de modèles de deep learning, notamment MLP et RNN.</li>
+                        <li>Analyse des erreurs de prédiction, mise en place de monitoring et orchestration de pipelines MLOps.</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <h3><span class="card-icon"><i class="fas fa-chart-pie"></i></span> Statisticien</h3>
+                    <div class="project-meta">
+                        <span class="tech-badge">KARA VILLE</span>
+                        <span class="tech-badge">Fév. 2021 – Août 2022</span>
+                        <span class="tech-badge">Kara, Togo</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Gestion et analyse de données budgétaires et d’indicateurs de performance académique.</li>
+                        <li>Administration de bases de données éducatives et contrôle de leur qualité.</li>
+                        <li>Production de rapports et tableaux de bord pour appuyer la prise de décision.</li>
+                    </ul>
+                </article>
             </div>
         </div>
     </section>
@@ -844,15 +928,28 @@
                 </article>
 
                 <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-heartbeat"></i></span> MLOps – Survie des patients</h3>
+                    <h3><span class="card-icon"><i class="fas fa-heartbeat"></i></span> MLOps – Classification du cancer du sein</h3>
                     <div class="project-meta">
                         <span class="tech-badge">MLOps</span>
                         <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Survival Analysis</span>
+                        <span class="tech-badge">Scikit-learn</span>
                     </div>
-                    <p>Structuration d’un pipeline de prédiction avec organisation de code et bonnes pratiques MLOps.</p>
+                    <p>Pipeline reproductible de préparation des données, d’entraînement et de prédiction avec une régression logistique et scikit-learn.</p>
                     <div class="project-links">
-                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/mlops" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir le projet</a>
+                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/mlops/mlops_breast_cancer" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir le projet</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3><span class="card-icon"><i class="fas fa-gamepad"></i></span> Apprentissage par renforcement – DQN &amp; PPO</h3>
+                    <div class="project-meta">
+                        <span class="tech-badge">Reinforcement Learning</span>
+                        <span class="tech-badge">PyTorch</span>
+                        <span class="tech-badge">GridWorld</span>
+                    </div>
+                    <p>Étude et implémentation d’agents DQN et PPO sur CartPole et un environnement GridWorld personnalisé, avec configurations d’expériences et outils de comparaison.</p>
+                    <div class="project-links">
+                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Reinforcement%20Learning" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir le projet</a>
                     </div>
                 </article>
 
@@ -906,6 +1003,19 @@
                     <div class="project-links">
                         <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/SparkBigData/PySpark" target="_blank" rel="noopener"><i class="fab fa-github"></i> Notebook PySpark</a>
                         <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/SparkBigData/Map_reduce" target="_blank" rel="noopener"><i class="fab fa-github"></i> Notebook MapReduce</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3><span class="card-icon"><i class="fas fa-briefcase-medical"></i></span> Challenge de survie – QRT</h3>
+                    <div class="project-meta">
+                        <span class="tech-badge">Biostatistiques</span>
+                        <span class="tech-badge">Analyse de survie</span>
+                        <span class="tech-badge">Python</span>
+                    </div>
+                    <p>Exploration, feature engineering et modélisation de données de survie dans le cadre d’un challenge de biostatistiques.</p>
+                    <div class="project-links">
+                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Biostatistiques/DATA%20CHALLENGE%20QRT" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir le projet</a>
                     </div>
                 </article>
             </div>
