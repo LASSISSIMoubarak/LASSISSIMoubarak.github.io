@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Moubarak LASSISSI | Data Scientist & ingénieur IA</title>
-    <meta name="description" content="Portfolio de Moubarak LASSISSI, Data Scientist et ingénieur IA. Découvrez Cap Carrière, son assistant IA local de recherche d'emploi, ainsi que ses projets en NLP, MLOps et data science.">
+    <title>Moubarak LASSISSI | Data Scientist &amp; ML Engineer</title>
+    <meta name="description" content="Portfolio de Moubarak LASSISSI, Data Scientist orienté statistique appliquée, machine learning et industrialisation, avec des expériences en aéronautique, océanographie et santé.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -626,6 +626,8 @@
                 text-align: left;
             }
 
+            .hero h1 { font-size: clamp(2rem, 9vw, 2.6rem); }
+
             .hero > div:first-child {
                 padding-right: 138px;
             }
@@ -783,13 +785,14 @@
     <header id="top">
         <div class="container hero">
             <div>
-                <span class="eyebrow"><i class="fas fa-sparkles"></i> Data & IA</span>
-                <h1>Data Scientist &amp; ingénieur IA</h1>
-                <span class="tagline">Créateur de Cap Carrière, un assistant IA local pour préparer des candidatures personnalisées.</span>
-                <p>Je conçois des solutions data, de l’analyse et de la modélisation statistique jusqu’au machine learning et à l’industrialisation. Avec Cap Carrière, j’applique aussi l’IA à un besoin concret : mieux organiser et personnaliser une recherche d’emploi.</p>
-                <p class="sector-line"><strong>Secteurs :</strong> aéronautique, océanographie, génétique statistique et santé. Intérêt pour les applications à la défense.</p>
+                <span class="eyebrow"><i class="fas fa-chart-line"></i> Statistique appliquée &amp; machine learning</span>
+                <h1>Data Scientist &amp; ML Engineer</h1>
+                <span class="tagline">Des données complexes aux modèles évalués et aux solutions mises en production.</span>
+                <p>Je conçois et évalue des modèles statistiques et de machine learning, de l’analyse des données à l’industrialisation. Mes expériences couvrent des problématiques industrielles, océanographiques et de santé.</p>
+                <p class="sector-line"><strong>Repères :</strong> contrôle qualité de plus de 4 millions d’observations océanographiques et projet d’analyse des ventes couvrant six sites.</p>
+                <p class="sector-line"><strong>Domaines :</strong> aéronautique, océanographie, santé et recherche industrielle.</p>
                 <div class="cta-row">
-                    <a href="#featured-project" class="btn btn-primary"><i class="fas fa-rocket"></i> Découvrir Cap Carrière</a>
+                    <a href="#projects" class="btn btn-primary"><i class="fas fa-chart-line"></i> Voir les projets phares</a>
                     <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak" class="btn btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                 </div>
                 <div class="hero-contact" aria-label="Informations de contact">
@@ -917,10 +920,79 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-label">Sélection</div>
-                <h2>Projets à découvrir</h2>
+                <h2>Projets phares</h2>
             </div>
             <div class="projects-grid">
                 <article class="project-card" id="featured-project">
+                    <h3><span class="card-icon"><i class="fas fa-chart-line"></i></span> Prévision des ventes multi-sites – Parker Aerospace</h3>
+                    <div class="project-meta">
+                        <span class="tech-badge">DB2 / SQL</span>
+                        <span class="tech-badge">Python / Dash</span>
+                        <span class="tech-badge">Machine Learning</span>
+                        <span class="tech-badge">Azure</span>
+                    </div>
+                    <p><strong>Problème :</strong> analyser et prévoir les ventes de six sites.</p>
+                    <p><strong>Contribution :</strong> participation à l’extraction et au traitement par lots des données DB2, à la création du tableau de bord interactif, aux tests et au déploiement.</p>
+                    <p><strong>Méthodes :</strong> comparaison d’un réseau de neurones, de Gradient Boosting et d’une régression pénalisée; SQL, Python/Dash, Azure DevOps et Azure.</p>
+                    <p><strong>Résultat et confidentialité :</strong> les prévisions pouvaient être téléchargées et enregistrées dans la base. Les résultats détaillés sont confidentiels en raison des études internes de l’entreprise.</p>
+                    <div class="project-links">
+                        <a class="demo-link" href="mailto:lassissimoubarak20@gmail.com?subject=Projet%20de%20pr%C3%A9vision%20des%20ventes"><i class="fas fa-envelope"></i> Échanger sur le projet</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3><span class="card-icon"><i class="fas fa-water"></i></span> Modélisation de données océanographiques</h3>
+                    <div class="project-meta">
+                        <span class="tech-badge">PokaPok</span>
+                        <span class="tech-badge">Deep Learning</span>
+                        <span class="tech-badge">MLOps</span>
+                    </div>
+                    <p><strong>Problème :</strong> contrôler la qualité de données océanographiques et améliorer les prédictions.</p>
+                    <p><strong>Contribution :</strong> contrôle qualité de plus de 4 millions d’observations, optimisation de modèles, analyse des erreurs, monitoring et orchestration de pipelines.</p>
+                    <p><strong>Méthodes :</strong> modèles MLP et RNN; suivi des erreurs de prédiction et pipelines MLOps.</p>
+                    <p><strong>Résultats :</strong> résultats détaillés confidentiels dans le cadre des études de l’entreprise.</p>
+                    <div class="project-links">
+                        <a class="demo-link" href="mailto:lassissimoubarak20@gmail.com?subject=Exp%C3%A9rience%20oc%C3%A9anographie"><i class="fas fa-envelope"></i> Échanger sur l’expérience</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3><span class="card-icon"><i class="fas fa-dna"></i></span> Génétique statistique &amp; bioinformatique</h3>
+                    <div class="project-meta">
+                        <span class="tech-badge">Université d’Angers</span>
+                        <span class="tech-badge">ANOVA</span>
+                        <span class="tech-badge">QTL</span>
+                        <span class="tech-badge">ARACNE</span>
+                    </div>
+                    <p><strong>Problème :</strong> étudier des effets génétiques et leurs interactions, ainsi que la détection de QTL.</p>
+                    <p><strong>Contribution et méthodes :</strong> analyses par ANOVA multifactorielle, simulations de tests du rapport de vraisemblance sous plusieurs hypothèses, reconstruction et évaluation de réseaux de régulation avec ARACNE.</p>
+                    <p><strong>Résultat :</strong> AUPRC de 0,40 pour la reconstruction du réseau génétique. Les autres résultats de recherche sont confidentiels.</p>
+                    <div class="project-links">
+                        <a class="demo-link" href="mailto:lassissimoubarak20@gmail.com?subject=Exp%C3%A9rience%20en%20g%C3%A9n%C3%A9tique%20statistique"><i class="fas fa-envelope"></i> Échanger sur l’expérience</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3><span class="card-icon"><i class="fas fa-briefcase-medical"></i></span> Challenge de survie – QRT</h3>
+                    <div class="project-meta">
+                        <span class="tech-badge">Biostatistiques</span>
+                        <span class="tech-badge">Analyse de survie</span>
+                        <span class="tech-badge">Python</span>
+                    </div>
+                    <p><strong>Problème :</strong> modéliser des données de survie dans le cadre d’un challenge en oncologie.</p>
+                    <p><strong>Contribution et méthodes :</strong> exploration des données, feature engineering et modélisation de survie en Python.</p>
+                    <p><strong>Résultat :</strong> C-index de 0,74.</p>
+                    <div class="project-links">
+                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Biostatistiques/DATA%20CHALLENGE%20QRT" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir le projet</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="section-header project-group-header">
+                <h2>Autres projets</h2>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card">
                     <h3><span class="card-icon"><i class="fas fa-robot"></i></span> Cap Carrière – agent personnel de recherche d’emploi</h3>
                     <div class="project-meta">
                         <span class="tech-badge">LLM</span>
@@ -928,55 +1000,11 @@
                         <span class="tech-badge">Flask</span>
                         <span class="tech-badge">SQLite</span>
                     </div>
-                    <p>J’ai développé cet assistant IA local pour centraliser des offres d’emploi, évaluer leur adéquation avec mon profil et suivre mes candidatures. À partir de CV de référence et des informations renseignées, il prépare des brouillons de CV et de lettres de motivation adaptés à chaque poste, en français ou en anglais, à relire et compléter. Les documents peuvent être exportés en DOCX, PDF ou LaTeX.</p>
+                    <p>Assistant IA local développé pour centraliser des offres, évaluer leur adéquation avec mon profil et suivre les candidatures. Il prépare des brouillons de CV et de lettres de motivation à relire, exportables en DOCX, PDF ou LaTeX.</p>
                     <div class="project-links">
                         <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Candidatures" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir le code</a>
-                        <a class="demo-link" href="mailto:lassissimoubarak20@gmail.com?subject=Projet%20Cap%20Carri%C3%A8re"><i class="fas fa-envelope"></i> En discuter</a>
-                        <a class="demo-link" href="https://www.linkedin.com/in/moubarak-lassissi-610b87202" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> Message LinkedIn</a>
                     </div>
                 </article>
-
-                <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-chart-line"></i></span> Prévision des ventes multi-sites - Parker Aerospace</h3>
-                    <div class="project-meta">
-                        <span class="tech-badge">DB2 / SQL</span>
-                        <span class="tech-badge">Python / Dash</span>
-                        <span class="tech-badge">Machine Learning</span>
-                        <span class="tech-badge">Azure</span>
-                    </div>
-                    <p>Chez Parker Aerospace à Angers, j’ai contribué à un outil d’analyse des ventes couvrant six sites. J’ai participé à l’extraction des données d’une base DB2 hébergée dans l’environnement cloud de l’entreprise, puis à leur traitement par lots avec SQL et des traitements concurrents. J’ai également contribué à la création d’un tableau de bord interactif avec Python et Dash pour explorer l’historique des ventes. Pour prévoir les montants, j’ai évalué plusieurs approches : un réseau de neurones, Gradient Boosting et une régression pénalisée. Les prévisions pouvaient être téléchargées et enregistrées dans la base. Enfin, j’ai participé aux tests avec Azure DevOps et au déploiement sur Azure. Les données détaillées de l’entreprise ne sont pas publiées.</p>
-                    <div class="project-links">
-                        <a class="demo-link" href="mailto:lassissimoubarak20@gmail.com?subject=Projet%20de%20pr%C3%A9vision%20des%20ventes"><i class="fas fa-envelope"></i> Me contacter à propos du projet</a>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-solar-panel"></i></span> SolarWatch - surveillance de performance photovoltaïque</h3>
-                    <div class="project-meta">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Isolation Forest</span>
-                        <span class="tech-badge">LSTM</span>
-                        <span class="tech-badge">Énergie solaire</span>
-                    </div>
-                    <p>Mini-projet de surveillance de données de production photovoltaïque : détection d’écarts persistants entre onduleurs, génération d’alertes candidates hiérarchisées et comparaison d’un modèle LSTM à une référence de prévision. Les données sont historiques et ne comportent pas de pannes labellisées : les alertes sont des signaux à examiner, pas des diagnostics confirmés.</p>
-                    <div class="project-links">
-                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/SolarWatch" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir le projet</a>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-chart-column"></i></span> Tableau de bord BI - transactions en Inde</h3>
-                    <div class="project-meta">
-                        <span class="tech-badge">Power BI</span>
-                        <span class="tech-badge">Power Automate</span>
-                        <span class="tech-badge">Visualisation de données</span>
-                    </div>
-                    <p>Rapport interactif orienté métier pour explorer les montants de transactions par secteur d’activité, genre, État, année et âge. Le projet comprend également l’automatisation de l’actualisation du rapport avec Power Automate.</p>
-                    <div class="project-links">
-                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Projet%20BI" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir le projet et les captures</a>
-                    </div>
-                </article>
-
                 <article class="project-card">
                     <h3><span class="card-icon"><i class="fas fa-train"></i></span> Challenge SNCF</h3>
                     <div class="project-meta">
@@ -984,7 +1012,7 @@
                         <span class="tech-badge">SARIMA</span>
                         <span class="tech-badge">XGBoost</span>
                     </div>
-                    <p>Analyse exploratoire et modélisation prédictive d’un enjeu de trafic ferroviaire avec validation sur un Data Challenge.</p>
+                    <p>Analyse exploratoire et modélisation prédictive du trafic ferroviaire avec SARIMA et XGBoost. MAE obtenu : 0,8 sur les données disponibles sur le site du challenge.</p>
                     <div class="project-links">
                         <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Data%20challenge" target="_blank" rel="noopener"><i class="fab fa-github"></i> Dossier</a>
                         <a class="demo-link" href="Rapport.pdf" target="_blank" rel="noopener"><i class="fas fa-chart-bar"></i> Rapport</a>
@@ -1017,19 +1045,6 @@
                 </article>
 
                 <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-briefcase-medical"></i></span> Challenge de survie – QRT</h3>
-                    <div class="project-meta">
-                        <span class="tech-badge">Biostatistiques</span>
-                        <span class="tech-badge">Analyse de survie</span>
-                        <span class="tech-badge">Python</span>
-                    </div>
-                    <p>Exploration, feature engineering et modélisation de données de survie dans le cadre d’un challenge en oncologie.</p>
-                    <div class="project-links">
-                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Biostatistiques/DATA%20CHALLENGE%20QRT" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir le projet</a>
-                    </div>
-                </article>
-
-                <article class="project-card">
                     <h3><span class="card-icon"><i class="fas fa-eye"></i></span> Traitement d’image</h3>
                     <div class="project-meta">
                         <span class="tech-badge">CNN</span>
@@ -1055,10 +1070,6 @@
                         <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/SparkBigData/Map_reduce" target="_blank" rel="noopener"><i class="fab fa-github"></i> Notebook MapReduce</a>
                     </div>
                 </article>
-            </div>
-            <div class="section-header project-group-header">
-                <div class="section-label">Explorer davantage</div>
-                <h2>Autres projets</h2>
             </div>
             <div class="projects-grid">
 
@@ -1194,7 +1205,7 @@
 
     <footer>
         <div class="container">
-            <p>© 2026 Moubarak LASSISSI — Data Analyst &amp; Scientist | BI, Machine Learning &amp; Santé</p>
+            <p>© 2026 Moubarak LASSISSI — Data Scientist | Statistique appliquée &amp; Machine Learning</p>
         </div>
     </footer>
 
