@@ -364,10 +364,6 @@
             margin-top: 58px;
         }
 
-        #featured-project {
-            scroll-margin-top: 92px;
-        }
-
         .about-lead {
             max-width: 920px;
             margin: -10px 0 30px;
@@ -760,6 +756,135 @@
             background: #ffffff;
             border-color: #dfe3dd;
         }
+
+        /* Text-led layout: keep entries as readable sections, not cards or grids. */
+        .hero-guides { display: none; }
+        .hero {
+            grid-template-columns: minmax(0, 1.28fr) minmax(0, 0.72fr);
+            gap: 48px;
+        }
+        .hero-card {
+            align-self: start;
+            justify-self: end;
+            width: min(100%, 400px);
+            padding: 0;
+            border: 0;
+            background: transparent;
+            box-shadow: none;
+        }
+        .hero-card::before { display: none; }
+        .hero-card .profile-photo {
+            border: 0;
+            border-radius: 8px;
+            box-shadow: 0 16px 34px rgba(28, 42, 36, 0.14);
+        }
+        .hero-card .about-lead {
+            max-width: none;
+            margin: 18px 0 0;
+            font-size: 0.96rem;
+            line-height: 1.65;
+        }
+        .hero-card .about-lead + .about-lead { margin-top: 0.65rem; }
+        .about-grid,
+        .skills-grid,
+        .projects-grid,
+        .contact-grid,
+        .experience-listing,
+        .project-list,
+        .skills-list {
+            display: block;
+        }
+
+        .project-card,
+        .info-card,
+        .skill-card,
+        .contact-card {
+            padding: 1.35rem 0;
+            border: 0;
+            border-bottom: 1px solid #dfe3dd;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+            opacity: 1;
+            transform: none;
+            transition: none;
+        }
+
+        .project-card:hover,
+        .project-card.visible {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .project-card h3,
+        .info-card h3,
+        .skill-card h3,
+        .contact-card h3 {
+            display: block;
+            margin-bottom: 0.45rem;
+            font-size: 1.16rem;
+        }
+
+        .project-card h3 { color: #111817; }
+        .project-card p { color: #52605a; }
+        .project-card p + p { margin-top: 0.55rem; }
+        .experience-context { color: #68736c; font-size: 0.9rem; font-weight: 500; }
+        .experience-listing .project-meta { display: none; }
+        .experience-list { margin-top: 0.6rem; }
+        .tech-badge { padding: 0; border: 0; background: transparent; color: #52605a; }
+        .tech-badge + .tech-badge::before { content: " · "; }
+        .project-tools { font-size: 0.9rem; }
+        .project-links { margin-top: 0.7rem; }
+        .github-link,
+        .demo-link {
+            display: inline;
+            padding: 0;
+            border: 0;
+            border-radius: 0;
+            background: transparent;
+            color: #11785f;
+            text-decoration: underline;
+            text-underline-offset: 0.18em;
+        }
+
+        .skills-list p { margin: 0; padding: 0.9rem 0; border-bottom: 1px solid #dfe3dd; color: #52605a; }
+        .skills-list strong { color: #111817; }
+        #projects > .container > .section-header h2 {
+            font-size: clamp(2.4rem, 6vw, 4rem);
+            letter-spacing: -0.055em;
+        }
+        .contact-list { display: flex; flex-wrap: wrap; gap: 0.6rem 1.8rem; margin: 0; padding: 0; list-style: none; }
+        .contact-list a { color: #11785f; font-weight: 700; text-underline-offset: 0.2em; }
+        :focus-visible { outline: 3px solid #11785f; outline-offset: 4px; }
+        section[id] { scroll-margin-top: 88px; }
+
+        @media (max-width: 720px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                text-align: center;
+            }
+            .hero > div:first-child { padding-right: 0; }
+            .hero-card {
+                position: static;
+                justify-self: center;
+                width: min(100%, 220px);
+                padding: 0;
+            }
+            .profile-photo { width: 100%; }
+            .hero h1 { font-size: clamp(2.2rem, 10vw, 3rem); }
+            .cta-row,
+            .hero-contact { justify-content: center; }
+            .cta-row { gap: 10px; }
+            .btn { padding: 0.78rem 1rem; }
+            .contact-list { display: block; }
+            .contact-list li + li { margin-top: 0.7rem; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -773,8 +898,7 @@
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links">
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#experience">Parcours professionnel</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#skills">Compétences</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -785,15 +909,10 @@
     <header id="top">
         <div class="container hero">
             <div>
-                <span class="eyebrow"><i class="fas fa-chart-line"></i> Statistique appliquée &amp; machine learning</span>
-                <h1>Data Scientist &amp; ML Engineer</h1>
-                <span class="tagline">Des données complexes aux modèles évalués et aux solutions mises en production.</span>
-                <p>Je conçois et évalue des modèles statistiques et de machine learning, de l’analyse des données à l’industrialisation. Mes expériences couvrent des problématiques industrielles, océanographiques et de santé.</p>
-                <p class="sector-line"><strong>Repères :</strong> contrôle qualité de plus de 4 millions d’observations océanographiques et projet d’analyse des ventes couvrant six sites.</p>
-                <p class="sector-line"><strong>Domaines :</strong> aéronautique, océanographie, santé et recherche industrielle.</p>
+                <h1>Data Scientist &amp; Data Analyst</h1>
+                <p><strong>Secteurs d’expertise :</strong> océanographie, santé, activités commerciales et industrielles, ainsi que gouvernance des données, notamment en contexte aérospatial.</p>
                 <div class="cta-row">
-                    <a href="#projects" class="btn btn-primary"><i class="fas fa-chart-line"></i> Voir les projets phares</a>
-                    <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak" class="btn btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#experience" class="btn btn-primary"><i class="fas fa-chart-line"></i> Voir mon parcours professionnel</a>
                 </div>
                 <div class="hero-contact" aria-label="Informations de contact">
                     <a href="mailto:lassissimoubarak20@gmail.com"><i class="fas fa-envelope"></i> lassissimoubarak20@gmail.com</a>
@@ -801,80 +920,37 @@
                     <a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                 </div>
             </div>
-
             <div class="hero-card">
                 <img src="Moubarak.png" alt="Moubarak LASSISSI" class="profile-photo">
-            </div>
-            <div class="container hero-guides" aria-label="Explorer le portfolio">
-                <a class="guide-card" href="#projects">
-                    <i class="fas fa-chart-line"></i>
-                    <span><strong>Projets</strong><span>Voir les réalisations data</span></span>
-                    <i class="fas fa-arrow-up-right"></i>
-                </a>
-                <a class="guide-card" href="#skills">
-                    <i class="fas fa-code"></i>
-                    <span><strong>Stack technique</strong><span>Découvrir les outils maîtrisés</span></span>
-                    <i class="fas fa-arrow-up-right"></i>
-                </a>
-                <a class="guide-card" href="#contact">
-                    <i class="fas fa-paper-plane"></i>
-                    <span><strong>Me contacter</strong><span>Échanger sur une mission</span></span>
-                    <i class="fas fa-arrow-up-right"></i>
-                </a>
+                <p class="about-lead">Data Scientist et Data Analyst, je suis également ouvert à des postes en data engineering ou en statistique. Je pars des besoins métier et de la qualité des données pour produire des analyses, des modèles et des outils de restitution adaptés à leur usage.</p>
+                <p class="about-lead">Mon parcours m’a conduit de l’océanographie et de la recherche en génétique statistique à la BI et à la prévision des ventes en environnement industriel.</p>
             </div>
         </div>
     </header>
 
-    <section id="about">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">À propos</div>
-                <h2>Mon approche</h2>
-            </div>
-            <div class="about-grid">
-                <div class="info-card">
-                    <div class="icon-box"><i class="fas fa-chart-line"></i></div>
-                    <h3>Analyse de données</h3>
-                    <p>Je transforme des données complexes en indicateurs exploitables, avec une logique d’analyse claire et orientée décision.</p>
-                </div>
-                <div class="info-card">
-                    <div class="icon-box"><i class="fas fa-robot"></i></div>
-                    <h3>Modélisation</h3>
-                    <p>Je conçois des modèles de prédiction et d’analyse statistique pour répondre à des problématiques concrètes en transport, santé et gestion.</p>
-                </div>
-                <div class="info-card">
-                    <div class="icon-box"><i class="fas fa-gears"></i></div>
-                    <h3>Data engineering & MLOps</h3>
-                    <p>Je structure des pipelines ETL/ELT, contrôle la qualité des données et contribue à l’industrialisation et au suivi des modèles.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="experience">
         <div class="container">
             <div class="section-header">
-                <div class="section-label">Parcours professionnel</div>
-                <h2>Expériences</h2>
+                <h2>Parcours professionnel</h2>
             </div>
-            <div class="projects-grid">
+            <div class="experience-listing">
                 <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-chart-column"></i></span> Data Analyst & BI Specialist</h3>
+                    <h3>Data Analyst &amp; BI Specialist <span class="experience-context">Parker Aerospace · Angers · Avril–septembre 2026</span></h3>
                     <div class="project-meta">
                         <span class="tech-badge">Parker Aerospace</span>
                         <span class="tech-badge">Avr. 2026 – Sept. 2026</span>
                         <span class="tech-badge">Angers</span>
                     </div>
                     <ul class="experience-list">
-                        <li>Conception et automatisation de rapports Power BI avec Power Automate.</li>
-                        <li>Exploration et traitement de données avec SQL, Power Query et DAX.</li>
-                        <li>Industrialisation et déploiement de modèles de machine learning avec Docker, Azure DevOps et Azure.</li>
-                        <li>Conception de pipelines ETL/ELT et traitement de jeux pouvant atteindre 300 000 lignes sur 800 colonnes avec multiprocessing.</li>
-                        <li>Application de principes de gouvernance des données.</li>
+                        <li>Conception et automatisation de rapports Power BI avec Power Automate ; exploration des données avec SQL, Power Query et DAX.</li>
+                        <li>Contribution à un benchmark de modèles pour analyser et prévoir les ventes de six sites, après les travaux de BI et de reporting.</li>
+                        <li>Extraction et traitement par lots de données DB2, création d’un tableau de bord interactif, participation aux tests et au déploiement. Comparaison d’un réseau de neurones, de Gradient Boosting et d’une régression pénalisée ; résultats détaillés confidentiels.</li>
+                        <li>Contribution à l’industrialisation de modèles et à des pipelines ETL/ELT, avec des jeux pouvant atteindre 300 000 lignes sur 800 colonnes.</li>
+                        <li>Outils : Power BI, Power Automate, SQL, Power Query, DAX, DB2, Python/Dash, multiprocessing, Docker, Azure DevOps et Azure.</li>
                     </ul>
                 </article>
                 <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-dna"></i></span> Data Analyst – Génétique statistique & bioinformatique</h3>
+                    <h3>Data Analyst – Génétique statistique &amp; bioinformatique <span class="experience-context">Université d’Angers · Octobre 2025–mars 2026</span></h3>
                     <div class="project-meta">
                         <span class="tech-badge">Université d’Angers</span>
                         <span class="tech-badge">Oct. 2025 – Mars 2026</span>
@@ -887,20 +963,20 @@
                     </ul>
                 </article>
                 <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-water"></i></span> Data Scientist | Data Engineer</h3>
+                    <h3>Data Scientist &amp; Data Engineer <span class="experience-context">PokaPok · Brest · Mars–septembre 2025</span></h3>
                     <div class="project-meta">
                         <span class="tech-badge">PokaPok</span>
                         <span class="tech-badge">Mars 2025 – Sept. 2025</span>
                         <span class="tech-badge">Brest</span>
                     </div>
                     <ul class="experience-list">
-                        <li>Contrôle qualité de plus de 4 millions d’observations océanographiques.</li>
-                        <li>Conception et optimisation de modèles de deep learning, notamment MLP et RNN.</li>
-                        <li>Analyse des erreurs de prédiction, mise en place de monitoring et orchestration de pipelines MLOps.</li>
+                        <li>Travail sur le contrôle qualité et l’amélioration d’un algorithme de détection d’anomalies appliqué à plus de 4 millions d’observations océanographiques.</li>
+                        <li>Optimisation de modèles MLP et RNN et analyse des erreurs de prédiction.</li>
+                        <li>Mise en place du monitoring et orchestration de pipelines MLOps.</li>
                     </ul>
                 </article>
                 <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-chart-pie"></i></span> Statisticien</h3>
+                    <h3>Statisticien <span class="experience-context">KARA VILLE · Kara, Togo · Février 2021–août 2022</span></h3>
                     <div class="project-meta">
                         <span class="tech-badge">KARA VILLE</span>
                         <span class="tech-badge">Fév. 2021 – Août 2022</span>
@@ -919,199 +995,48 @@
     <section id="projects">
         <div class="container">
             <div class="section-header">
-                <div class="section-label">Sélection</div>
-                <h2>Projets phares</h2>
+                <div class="section-label">Projets et recherches</div>
+                <h2>Réalisations personnelles et recherches</h2>
             </div>
-            <div class="projects-grid">
-                <article class="project-card" id="featured-project">
-                    <h3><span class="card-icon"><i class="fas fa-chart-line"></i></span> Prévision des ventes multi-sites – Parker Aerospace</h3>
-                    <div class="project-meta">
-                        <span class="tech-badge">DB2 / SQL</span>
-                        <span class="tech-badge">Python / Dash</span>
-                        <span class="tech-badge">Machine Learning</span>
-                        <span class="tech-badge">Azure</span>
-                    </div>
-                    <p><strong>Problème :</strong> analyser et prévoir les ventes de six sites.</p>
-                    <p><strong>Contribution :</strong> participation à l’extraction et au traitement par lots des données DB2, à la création du tableau de bord interactif, aux tests et au déploiement.</p>
-                    <p><strong>Méthodes :</strong> comparaison d’un réseau de neurones, de Gradient Boosting et d’une régression pénalisée; SQL, Python/Dash, Azure DevOps et Azure.</p>
-                    <p><strong>Résultat et confidentialité :</strong> les prévisions pouvaient être téléchargées et enregistrées dans la base. Les résultats détaillés sont confidentiels en raison des études internes de l’entreprise.</p>
-                    <div class="project-links">
-                        <a class="demo-link" href="mailto:lassissimoubarak20@gmail.com?subject=Projet%20de%20pr%C3%A9vision%20des%20ventes"><i class="fas fa-envelope"></i> Échanger sur le projet</a>
-                    </div>
-                </article>
-
+            <div class="project-list">
                 <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-water"></i></span> Modélisation de données océanographiques</h3>
-                    <div class="project-meta">
-                        <span class="tech-badge">PokaPok</span>
-                        <span class="tech-badge">Deep Learning</span>
-                        <span class="tech-badge">MLOps</span>
-                    </div>
-                    <p><strong>Problème :</strong> contrôler la qualité de données océanographiques et améliorer les prédictions.</p>
-                    <p><strong>Contribution :</strong> contrôle qualité de plus de 4 millions d’observations, optimisation de modèles, analyse des erreurs, monitoring et orchestration de pipelines.</p>
-                    <p><strong>Méthodes :</strong> modèles MLP et RNN; suivi des erreurs de prédiction et pipelines MLOps.</p>
-                    <p><strong>Résultats :</strong> résultats détaillés confidentiels dans le cadre des études de l’entreprise.</p>
-                    <div class="project-links">
-                        <a class="demo-link" href="mailto:lassissimoubarak20@gmail.com?subject=Exp%C3%A9rience%20oc%C3%A9anographie"><i class="fas fa-envelope"></i> Échanger sur l’expérience</a>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-dna"></i></span> Génétique statistique &amp; bioinformatique</h3>
-                    <div class="project-meta">
-                        <span class="tech-badge">Université d’Angers</span>
-                        <span class="tech-badge">ANOVA</span>
-                        <span class="tech-badge">QTL</span>
-                        <span class="tech-badge">ARACNE</span>
-                    </div>
-                    <p><strong>Problème :</strong> étudier des effets génétiques et leurs interactions, ainsi que la détection de QTL.</p>
-                    <p><strong>Contribution et méthodes :</strong> analyses par ANOVA multifactorielle, simulations de tests du rapport de vraisemblance sous plusieurs hypothèses, reconstruction et évaluation de réseaux de régulation avec ARACNE.</p>
-                    <p><strong>Résultat :</strong> AUPRC de 0,40 pour la reconstruction du réseau génétique. Les autres résultats de recherche sont confidentiels.</p>
-                    <div class="project-links">
-                        <a class="demo-link" href="mailto:lassissimoubarak20@gmail.com?subject=Exp%C3%A9rience%20en%20g%C3%A9n%C3%A9tique%20statistique"><i class="fas fa-envelope"></i> Échanger sur l’expérience</a>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-briefcase-medical"></i></span> Challenge de survie – QRT</h3>
-                    <div class="project-meta">
-                        <span class="tech-badge">Biostatistiques</span>
-                        <span class="tech-badge">Analyse de survie</span>
-                        <span class="tech-badge">Python</span>
-                    </div>
-                    <p><strong>Problème :</strong> modéliser des données de survie dans le cadre d’un challenge en oncologie.</p>
-                    <p><strong>Contribution et méthodes :</strong> exploration des données, feature engineering et modélisation de survie en Python.</p>
-                    <p><strong>Résultat :</strong> C-index de 0,74.</p>
-                    <div class="project-links">
-                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Biostatistiques/DATA%20CHALLENGE%20QRT" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir le projet</a>
-                    </div>
+                    <h3>Recherche en santé : analyse de survie <span class="experience-context">Challenge QRT</span></h3>
+                    <p>Exploration de données, création de variables et modélisation de survie en oncologie ; C-index obtenu : 0,74.</p>
+                    <p class="project-links"><a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Biostatistiques/DATA%20CHALLENGE%20QRT" target="_blank" rel="noopener">Voir le projet GitHub</a></p>
                 </article>
             </div>
 
-            <div class="section-header project-group-header">
-                <h2>Autres projets</h2>
-            </div>
-            <div class="projects-grid">
+            <div class="project-list">
                 <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-robot"></i></span> Cap Carrière – agent personnel de recherche d’emploi</h3>
-                    <div class="project-meta">
-                        <span class="tech-badge">LLM</span>
-                        <span class="tech-badge">Qwen / Ollama</span>
-                        <span class="tech-badge">Flask</span>
-                        <span class="tech-badge">SQLite</span>
-                    </div>
-                    <p>Assistant IA local développé pour centraliser des offres, évaluer leur adéquation avec mon profil et suivre les candidatures. Il prépare des brouillons de CV et de lettres de motivation à relire, exportables en DOCX, PDF ou LaTeX.</p>
-                    <div class="project-links">
-                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Candidatures" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir le code</a>
-                    </div>
+                    <h3>Santé et apprentissage automatique</h3>
+                    <p>Pipeline reproductible de préparation des données, d’entraînement et de prédiction pour la classification du cancer du sein, avec régression logistique et scikit-learn.</p>
+                    <p class="project-links"><a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/mlops/mlops_breast_cancer" target="_blank" rel="noopener">Voir le projet GitHub</a></p>
                 </article>
                 <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-train"></i></span> Challenge SNCF</h3>
-                    <div class="project-meta">
-                        <span class="tech-badge">Time Series</span>
-                        <span class="tech-badge">SARIMA</span>
-                        <span class="tech-badge">XGBoost</span>
-                    </div>
-                    <p>Analyse exploratoire et modélisation prédictive du trafic ferroviaire avec SARIMA et XGBoost. MAE obtenu : 0,8 sur les données disponibles sur le site du challenge.</p>
-                    <div class="project-links">
-                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Data%20challenge" target="_blank" rel="noopener"><i class="fab fa-github"></i> Dossier</a>
-                        <a class="demo-link" href="Rapport.pdf" target="_blank" rel="noopener"><i class="fas fa-chart-bar"></i> Rapport</a>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-heartbeat"></i></span> MLOps – Classification du cancer du sein</h3>
-                    <div class="project-meta">
-                        <span class="tech-badge">MLOps</span>
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Scikit-learn</span>
-                    </div>
-                    <p>Pipeline reproductible de préparation des données, d’entraînement et de prédiction avec une régression logistique et scikit-learn.</p>
-                    <div class="project-links">
-                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/mlops/mlops_breast_cancer" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir le projet</a>
-                    </div>
+                    <h3>Machine learning et deep learning</h3>
+                    <p>Explorations en NLP (Transformers, classification et recherche sémantique), vision par ordinateur (classification d’images et segmentation) et apprentissage par renforcement (DQN et PPO).</p>
+                    <p class="project-links">
+                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/NLP" target="_blank" rel="noopener">NLP</a>
+                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Traitement%20d%27image" target="_blank" rel="noopener">Vision</a>
+                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Reinforcement%20Learning" target="_blank" rel="noopener">Apprentissage par renforcement</a>
+                    </p>
                 </article>
                 <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-language"></i></span> NLP – Transformers &amp; fine-tuning</h3>
-                    <div class="project-meta">
-                        <span class="tech-badge">Transformer</span>
-                        <span class="tech-badge">T5</span>
-                        <span class="tech-badge">Classification</span>
-                    </div>
-                    <p>Mes notebooks explorent plusieurs facettes du NLP : construction d’un mini-Transformer depuis zéro, introduction aux LLM et au RAG, embeddings et recherche sémantique, classification de fake news et fine-tuning de T5 pour générer des titres. Ils me permettent d’étudier les architectures, les représentations textuelles et différentes tâches de traitement du langage.</p>
-                    <div class="project-links">
-                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/NLP" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir les notebooks</a>
-                    </div>
+                    <h3>Data engineering : traitement distribué</h3>
+                    <p>Travaux pratiques de traitement distribué de données avec PySpark et MapReduce.</p>
+                    <p class="project-links">
+                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/SparkBigData/PySpark" target="_blank" rel="noopener">PySpark</a>
+                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/SparkBigData/Map_reduce" target="_blank" rel="noopener">MapReduce</a>
+                    </p>
                 </article>
-
                 <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-eye"></i></span> Traitement d’image</h3>
-                    <div class="project-meta">
-                        <span class="tech-badge">CNN</span>
-                        <span class="tech-badge">TensorFlow</span>
-                        <span class="tech-badge">Segmentation</span>
-                    </div>
-                    <p>Exploration autour de la classification d’images et techniques de segmentation avec notebooks d’expérimentation.</p>
-                    <div class="project-links">
-                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Traitement%20d%27image" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir le projet</a>
-                    </div>
+                    <h3>Prévision de trafic ferroviaire <span class="experience-context">Challenge SNCF</span></h3>
+                    <p>Analyse exploratoire et prévision du trafic avec SARIMA et XGBoost ; MAE de 0,8 sur les données du challenge.</p>
+                    <p class="project-links">
+                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Data%20challenge" target="_blank" rel="noopener">Dossier GitHub</a>
+                        <a class="github-link" href="Rapport.pdf" target="_blank" rel="noopener">Lire le rapport PDF</a>
+                    </p>
                 </article>
-
-                <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-database"></i></span> Big Data &amp; Spark</h3>
-                    <div class="project-meta">
-                        <span class="tech-badge">Spark</span>
-                        <span class="tech-badge">MapReduce</span>
-                        <span class="tech-badge">Flask</span>
-                    </div>
-                    <p>Implémentation de pipelines distribués pour traiter de grands volumes de données et produire des analyses scalables.</p>
-                    <div class="project-links">
-                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/SparkBigData/PySpark" target="_blank" rel="noopener"><i class="fab fa-github"></i> Notebook PySpark</a>
-                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/SparkBigData/Map_reduce" target="_blank" rel="noopener"><i class="fab fa-github"></i> Notebook MapReduce</a>
-                    </div>
-                </article>
-            </div>
-            <div class="projects-grid">
-
-                <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-gamepad"></i></span> Apprentissage par renforcement – DQN &amp; PPO</h3>
-                    <div class="project-meta">
-                        <span class="tech-badge">Reinforcement Learning</span>
-                        <span class="tech-badge">PyTorch</span>
-                        <span class="tech-badge">GridWorld</span>
-                    </div>
-                    <p>J’étudie et compare les algorithmes DQN et PPO sur CartPole et un environnement GridWorld que j’ai créé. Le projet comprend plusieurs variantes PPO, des expériences d’ablation pour analyser les composants de DQN, ainsi que des configurations pour LunarLander et des outils de comparaison des résultats.</p>
-                    <div class="project-links">
-                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Reinforcement%20Learning" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir le projet</a>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-chart-pie"></i></span> Shiny CATPCA</h3>
-                    <div class="project-meta">
-                        <span class="tech-badge">R</span>
-                        <span class="tech-badge">Shiny</span>
-                        <span class="tech-badge">PCA</span>
-                    </div>
-                    <p>Application interactive pour explorer des méthodes d’analyse multivariée et de réduction de dimension.</p>
-                    <div class="project-links">
-                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/R_project/CATPCA" target="_blank" rel="noopener"><i class="fab fa-github"></i> Voir l’app</a>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <h3><span class="card-icon"><i class="fas fa-bullseye"></i></span> Modélisation bayésienne</h3>
-                    <div class="project-meta">
-                        <span class="tech-badge">Bayesian</span>
-                        <span class="tech-badge">Stan</span>
-                        <span class="tech-badge">R</span>
-                    </div>
-                    <p>Mise en place d’un modèle bayésien pour analyser des effets et médiations dans des données complexes.</p>
-                    <div class="project-links">
-                        <a class="github-link" href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak/tree/main/Modelisation%20Bay%C3%A9sienne" target="_blank" rel="noopener"><i class="fab fa-github"></i> Accéder</a>
-                    </div>
-                </article>
-
             </div>
         </div>
     </section>
@@ -1122,57 +1047,11 @@
                 <div class="section-label">Compétences</div>
                 <h2>Stack technique</h2>
             </div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="icon-box"><i class="fas fa-microsoft"></i></div>
-                    <h3>Power Platform</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Power BI</span>
-                        <span class="skill-item">Power Apps</span>
-                        <span class="skill-item">Power Automate</span>
-                        <span class="skill-item">SharePoint</span>
-                        <span class="skill-item">Excel</span>
-                        <span class="skill-item">PowerPoint</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="icon-box"><i class="fas fa-brain"></i></div>
-                    <h3>Machine Learning</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">XGBoost</span>
-                        <span class="skill-item">SVM</span>
-                        <span class="skill-item">PCA</span>
-                        <span class="skill-item">Time Series</span>
-                        <span class="skill-item">Scikit-learn</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="icon-box"><i class="fas fa-robot"></i></div>
-                    <h3>LLM &amp; IA générative</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Prompt engineering</span>
-                        <span class="skill-item">RAG</span>
-                        <span class="skill-item">Embeddings</span>
-                        <span class="skill-item">Transformers</span>
-                        <span class="skill-item">Fine-tuning T5</span>
-                        <span class="skill-item">Ollama / Qwen</span>
-                        <span class="skill-item">Copilot SDK</span>
-                        <span class="skill-item">PyTorch</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="icon-box"><i class="fas fa-gears"></i></div>
-                    <h3>MLOps & Data</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Docker</span>
-                        <span class="skill-item">Spark</span>
-                        <span class="skill-item">SQL</span>
-                        <span class="skill-item">R</span>
-                        <span class="skill-item">FastAPI</span>
-                        <span class="skill-item">Flask</span>
-                    </div>
-                </div>
+            <div class="skills-list">
+                <p><strong>Analyse &amp; BI :</strong> SQL, Power BI, Power Query, DAX, Power Automate.</p>
+                <p><strong>Statistique &amp; machine learning :</strong> Python, scikit-learn, XGBoost, modèles de séries temporelles, analyse de survie.</p>
+                <p><strong>Deep learning &amp; IA :</strong> PyTorch, Transformers, NLP, vision par ordinateur.</p>
+                <p><strong>Data engineering &amp; déploiement :</strong> ETL/ELT, Spark, Docker, Azure, Azure DevOps.</p>
             </div>
         </div>
     </section>
@@ -1183,29 +1062,17 @@
                 <div class="section-label">Contact</div>
                 <h2>Travaillons ensemble</h2>
             </div>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="icon-box"><i class="fas fa-envelope"></i></div>
-                    <h3>Email</h3>
-                    <p><a href="mailto:lassissimoubarak20@gmail.com">lassissimoubarak20@gmail.com</a></p>
-                </div>
-                <div class="contact-card">
-                    <div class="icon-box"><i class="fab fa-linkedin"></i></div>
-                    <h3>LinkedIn</h3>
-                    <p><a href="https://www.linkedin.com/in/moubarak-lassissi-610b87202" target="_blank" rel="noopener">linkedin.com/in/moubarak-lassissi</a></p>
-                </div>
-                <div class="contact-card">
-                    <div class="icon-box"><i class="fab fa-github"></i></div>
-                    <h3>GitHub</h3>
-                    <p><a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak" target="_blank" rel="noopener">github.com/LASSISSIMoubarak</a></p>
-                </div>
-            </div>
+            <ul class="contact-list">
+                <li><a href="mailto:lassissimoubarak20@gmail.com">lassissimoubarak20@gmail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/moubarak-lassissi-610b87202" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com/LASSISSIMoubarak/LASSISSIMoubarak" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>© 2026 Moubarak LASSISSI — Data Scientist | Statistique appliquée &amp; Machine Learning</p>
+            <p>© 2026 Moubarak LASSISSI | Data Scientist | Statistique appliquée &amp; Machine Learning</p>
         </div>
     </footer>
 
@@ -1224,7 +1091,8 @@
                 const target = document.querySelector(targetId);
                 if (!target) return;
                 e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
 
                 if (navLinks.classList.contains('open')) {
                     navLinks.classList.remove('open');
@@ -1233,16 +1101,6 @@
             });
         });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.12 });
-
-        document.querySelectorAll('.project-card').forEach(card => observer.observe(card));
     </script>
 </body>
 </html>
